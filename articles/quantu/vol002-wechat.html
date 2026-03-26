@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>全图 Vol.002 - 微信公众号粘贴版</title>
+<style>
+body { background: #f0f0f0; margin: 0; font-family: -apple-system, "PingFang SC", sans-serif; }
+.page-bar {
+  background: #2d5a27; color: #fff; text-align: center; padding: 14px 20px;
+  font-size: 13px; line-height: 1.6; position: sticky; top: 0; z-index: 100;
+}
+.page-bar button {
+  background: #fff; color: #2d5a27; border: none; padding: 8px 24px;
+  border-radius: 4px; font-size: 13px; font-weight: 600; cursor: pointer; margin-top: 8px;
+}
+.page-bar button:hover { background: #e8f5e3; }
+.outer { max-width: 580px; margin: 20px auto; background: #fff; box-shadow: 0 1px 8px rgba(0,0,0,0.08); }
+</style>
+<script>
+async function copyContent() {
+  const el = document.getElementById('article');
+  const btn = document.getElementById('copyBtn');
+  try {
+    const html = el.outerHTML;
+    const text = el.innerText;
+    await navigator.clipboard.write([
+      new ClipboardItem({
+        'text/html': new Blob([html], { type: 'text/html' }),
+        'text/plain': new Blob([text], { type: 'text/plain' })
+      })
+    ]);
+    btn.textContent = 'Copied!';
+  } catch (e) {
+    const range = document.createRange();
+    range.selectNodeContents(el);
+    const sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+    document.execCommand('copy');
+    btn.textContent = 'Copied!';
+  }
+  setTimeout(() => { btn.textContent = '一键复制'; }, 2000);
+}
+</script>
+</head>
+<body>
+
+<div class="page-bar">
+  点击按钮复制富文本，然后粘贴到微信公众号编辑器<br>
+  <span style="opacity:0.7;font-size:11px">全部内联样式 | 栏目色：松绿 #2d5a27 | 坐标图：打开 chart-generator.html → 下载PNG → 上传微信素材库后替换占位区</span><br>
+  <button id="copyBtn" onclick="copyContent()">一键复制</button>
+</div>
+
+<div class="outer">
+<section id="article" style="padding:0;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif;font-size:15px;color:#333333;line-height:1.85;">
+
+<!-- Top accent bar -->
+<hr style="border:none;height:6px;background-color:#2d5a27;margin:0;">
+
+<!-- Header -->
+<section style="padding:24px 22px 16px;">
+
+<!-- Column tag -->
+<p style="margin:0 0 14px 0;">
+<span style="display:inline-block;background:#2d5a27;color:#ffffff;font-size:12px;font-weight:600;padding:3px 10px;border-radius:3px;letter-spacing:1px;">全图 PANORAMA</span>
+<span style="display:inline-block;background:#f8f7f4;color:#888888;font-size:11px;padding:3px 8px;border-radius:3px;margin-left:4px;">Vol.002</span>
+</p>
+
+<!-- Title -->
+<h1 style="font-size:21px;font-weight:700;color:#222222;line-height:1.4;margin:0 0 8px 0;padding:0;">地缘危机进入"消耗战"、全球再迎"黑色星期一"、AI监管引导理性回归、硬科技成资本"避风港"</h1>
+
+<!-- Meta -->
+<p style="font-size:12px;color:#888888;line-height:1.5;margin:0 0 16px 0;">未来法域 · 全图 &nbsp;|&nbsp; 一周全球宏观大势 &nbsp;|&nbsp; 周一 08:30 &nbsp;|&nbsp; 2026.03.17 - 2026.03.23</p>
+
+<!-- Green divider -->
+<hr style="border:none;height:2px;background-color:#2d5a27;margin:0;">
+</section>
+
+<!-- 本周主线 -->
+<section style="margin:0 22px 24px;border-left:3px solid #2d5a27;background:#f4f8f3;padding:14px 16px;border-radius:0 6px 6px 0;">
+<p style="font-size:13px;font-weight:700;color:#2d5a27;line-height:1.5;margin:0 0 8px 0;">本周主线</p>
+<p style="font-size:14px;color:#333333;line-height:1.85;margin:0 0 8px 0;">霍尔木兹海峡危机进入"消耗战"第四周；欧盟谴责以色列单方面扩大在约旦河西岸行动；特朗普推迟访华；3月23日全球股市再迎"黑色星期一"；韩股熔断、黄金跳水；AI监管加速落地，微信上线官方插件，合规进入实操期；宇树科技科创板IPO获受理，硬科技成为资本避风港。</p>
+<p style="font-size:13px;color:#888888;line-height:1.6;margin:0;">建立一周认知坐标，从这里开始。</p>
+</section>
+
+<!-- 关键词坐标图（占位区，需从 chart-generator.html 导出 PNG 后替换） -->
+<section style="padding:0 22px 16px;">
+<div style="width:100%;background:#f4f8f3;border:1.5px dashed #aec9ab;border-radius:4px;padding:28px 0;text-align:center;">
+<p style="font-size:12px;color:#aec9ab;margin:0;line-height:2.0;">本周关键词坐标图<br>打开 chart-generator.html → 点击"下载 PNG"<br>上传到微信素材库后替换此区块</p>
+</div>
+<p style="font-size:10px;color:#bbb;text-align:center;margin:6px 0 0 0;line-height:1.4;">本周关键词坐标图 · 仅示意，不代表精确分类</p>
+</section>
+
+<!-- Content body -->
+<section style="padding:0 22px 20px;">
+
+<!-- ========== 观势时局 ========== -->
+<h2 style="font-size:17px;font-weight:700;color:#222222;line-height:1.5;margin:4px 0 4px 0;padding:0;border:none;">
+<span style="display:inline-block;width:4px;height:18px;background:#2d5a27;border-radius:2px;margin-right:8px;vertical-align:middle;"></span>观势时局</h2>
+<p style="font-size:12px;color:#888888;margin:0 0 4px 12px;">地缘危机长期化引发"黑天鹅"，3月23日市场剧烈重定价</p>
+<hr style="border:none;height:1px;background-color:#aec9ab;margin:0 0 18px 0;">
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 6px 0;"><strong style="color:#2d5a27;">01</strong>&nbsp; <strong style="color:#222222;">全球市场震荡：3月23日"黑色星期一"</strong></p>
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 4px 12px;">恐慌蔓延：受中东局势长期化及特朗普推迟访华双重打击，3月23日（周一）全球金融市场遭遇重挫。韩国KOSPI指数大跌超6%触发熔断，日经225指数、恒生指数均显著下挫。</p>
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 4px 12px;">避险资产异动：现货黄金价格罕见跳水（跌幅超1.5%），市场资金从风险资产向美元现金及短期美债极速转移，全球流动性预期发生剧烈波动。</p>
+<p style="font-size:12px;font-style:italic;color:#999;line-height:1.5;margin:0 0 18px 0;">[Bloomberg, 2026.03.23] [路透社, 2026.03.23] [韩联社, 2026.03.23] [财联社, 2026.03.23]</p>
+
+<hr style="border:none;height:1px;background-color:#e0ddd6;margin:18px 0;">
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 6px 0;"><strong style="color:#2d5a27;">02</strong>&nbsp; <strong style="color:#222222;">中东局势：从"全面封锁"到"消耗性对峙"</strong></p>
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 4px 12px;">局势升级（3月21日—23日）：霍尔木兹海峡危机已持续近一个月。美国总统特朗普发出"48小时通牒"，威胁打击伊朗发电厂；伊朗随即强硬回击，宣布若能源设施遭袭将打击美军基地，并击落两架美军无人机。</p>
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 4px 12px;">策略调整：伊朗并未完全切断航道，而是实施"选择性通航管制"——仅允许非"敌方"船只在协调后通过。这种"切香肠"式的封锁策略，使危机从突发性休克转为长期性的供应链梗阻。</p>
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 4px 12px;">国际反应：英、法、德、日等七国发表联合声明谴责伊朗，但军事护航行动尚未实质性展开，外交斡旋陷入僵局。</p>
+<p style="font-size:12px;font-style:italic;color:#999;line-height:1.5;margin:0 0 18px 0;">[AP, 2026.03.23] [BBC, 2026.03.22] [路透社, 2026.03.21] [CNN, 2026.03.22]</p>
+
+<hr style="border:none;height:1px;background-color:#e0ddd6;margin:18px 0;">
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 6px 0;"><strong style="color:#2d5a27;">03</strong>&nbsp; <strong style="color:#222222;">欧盟谴责以色列单方面扩大在约旦河西岸行动</strong></p>
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 4px 12px;">欧洲理事会3月19日发表声明，强烈谴责以色列单方面扩大在巴勒斯坦约旦河西岸地区的行动，敦促以色列撤销相关决定，履行国际法义务，并保护被占领土上的巴勒斯坦民众。欧洲理事会还强烈谴责以色列定居者持续针对巴勒斯坦平民实施暴力行为，并再次呼吁对以色列极端定居者及其支持者采取进一步限制措施。以色列今年2月宣布多项决定，在约旦河西岸开展土地登记，扩大对约旦河西岸的行政和执法措施。多国及国际组织予以谴责。</p>
+<p style="font-size:12px;font-style:italic;color:#999;line-height:1.5;margin:0 0 18px 0;">[欧洲理事会官网, 2026.03.19] [Reuters, 2026.03.19] [新华社, 2026.03.19]</p>
+
+<hr style="border:none;height:1px;background-color:#e0ddd6;margin:18px 0;">
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 6px 0;"><strong style="color:#2d5a27;">04</strong>&nbsp; <strong style="color:#222222;">宏观经济与政策</strong></p>
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 4px 12px;">3月16日：中美经贸高级别磋商在巴黎举行，双方围绕关税及机制化沟通达成部分共识，但受地缘局势影响，实质性突破有限。</p>
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 4px 12px;">3月17日：美国总统特朗普宣布推迟原定于3月下旬的访华行程（推迟约5—6周），称需留在华盛顿协调海湾事务，导致市场对短期贸易缓和的预期落空。</p>
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 4px 12px;">政策落地：随着"十五五"规划建议的逐步细化，本周科技领域迎来实质性利好，宇树科技等硬科技企业IPO进程加速，显示政策红利正从"顶层设计"向"资本市场"传导。</p>
+<p style="font-size:12px;font-style:italic;color:#999;line-height:1.5;margin:0 0 18px 0;">[新华社, 2026.03.17] [财新, 2026.03.16] [路透社, 2026.03.17] [WSJ, 2026.03.17]</p>
+
+<!-- ========== 全球法讯 ========== -->
+<h2 style="font-size:17px;font-weight:700;color:#222222;line-height:1.5;margin:28px 0 4px 0;padding:0;border:none;">
+<span style="display:inline-block;width:4px;height:18px;background:#2d5a27;border-radius:2px;margin-right:8px;vertical-align:middle;"></span>全球法讯</h2>
+<p style="font-size:12px;color:#888888;margin:0 0 4px 12px;">AI监管从"呼吁"走向"落地"，跨境贸易合规成本激增</p>
+<hr style="border:none;height:1px;background-color:#aec9ab;margin:0 0 18px 0;">
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 6px 0;"><strong style="color:#2d5a27;">01</strong>&nbsp; <strong style="color:#222222;">AI监管与合规体系加速落地</strong></p>
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 4px 12px;">3月17日：国家安全部发布《"龙虾"（OpenClaw）安全养殖手册》，从国家安全层面明确OpenClaw智能体的系统控制权、数据泄露等四大原生风险。3月22日：国家互联网应急中心（CNCERT）联合发布《OpenClaw安全使用实践指南》，强调隔离运行与不处理敏感数据。</p>
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 4px 12px;">拟人化AI监管：国家网信办等三部门3月17日发布《人工智能拟人化互动服务管理暂行办法（征求意见稿）》，对AI拟人化交互服务提出透明度及未成年人保护要求。</p>
+<p style="font-size:12px;font-style:italic;color:#999;line-height:1.5;margin:0 0 18px 0;">[国家安全部官网, 2026.03.17] [CNCERT, 2026.03.22] [国家网信办, 2026.03.17]</p>
+
+<hr style="border:none;height:1px;background-color:#e0ddd6;margin:18px 0;">
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 6px 0;"><strong style="color:#2d5a27;">02</strong>&nbsp; <strong style="color:#222222;">数据与知识产权司法实践</strong></p>
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 4px 12px;">3月20日：TCL华星光电在美国起诉三星显示OLED专利侵权，涉及显示技术核心专利，系近期跨境知识产权维权标杆案件。</p>
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 4px 12px;">3月16日：最高人民法院发布《未成年人权益保护民事案件审理指引》，统一司法标准。</p>
+<p style="font-size:12px;font-style:italic;color:#999;line-height:1.5;margin:0 0 18px 0;">[最高人民法院官网, 2026.03.16] [财新, 2026.03.20] [路透社, 2026.03.20]</p>
+
+<hr style="border:none;height:1px;background-color:#e0ddd6;margin:18px 0;">
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 6px 0;"><strong style="color:#2d5a27;">03</strong>&nbsp; <strong style="color:#222222;">资本市场与金融监管</strong></p>
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 4px 12px;">3月19日：香港证监会发布《中心化虚拟资产交易平台合规指引（征求意见稿）》，完善虚拟资产监管。</p>
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 4px 12px;">3月22日：中植集团破产重整听证会召开，风险处置进入司法清算程序。</p>
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 4px 12px;">3月17日：全国人大常委会法工委公布《中华人民共和国金融法（草案）》，构建统一金融监管框架。</p>
+<p style="font-size:12px;font-style:italic;color:#999;line-height:1.5;margin:0 0 18px 0;">[香港证监会官网, 2026.03.19] [财新, 2026.03.22] [全国人大官网, 2026.03.17]</p>
+
+<!-- ========== 行业风向 ========== -->
+<h2 style="font-size:17px;font-weight:700;color:#222222;line-height:1.5;margin:28px 0 4px 0;padding:0;border:none;">
+<span style="display:inline-block;width:4px;height:18px;background:#2d5a27;border-radius:2px;margin-right:8px;vertical-align:middle;"></span>行业风向</h2>
+<p style="font-size:12px;color:#888888;margin:0 0 4px 12px;">Agent成为核心赛道，Token经济与算力基建重构产业格局</p>
+<hr style="border:none;height:1px;background-color:#aec9ab;margin:0 0 18px 0;">
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 6px 0;"><strong style="color:#2d5a27;">01</strong>&nbsp; <strong style="color:#222222;">微信上线官方ClawBot插件，AI原生接入普及</strong></p>
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 4px 12px;">3月21日，微信推出官方ClawBot插件，原生支持OpenClaw接入，标志着AI功能接入主流通讯平台，合规进入实操期。</p>
+<p style="font-size:12px;font-style:italic;color:#999;line-height:1.5;margin:0 0 18px 0;">[腾讯官方公告, 2026.03.21] [36氪, 2026.03.21] [机器之心, 2026.03.21]</p>
+
+<hr style="border:none;height:1px;background-color:#e0ddd6;margin:18px 0;">
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 6px 0;"><strong style="color:#2d5a27;">02</strong>&nbsp; <strong style="color:#222222;">字节跳动推出Seedance2.0短剧Agent</strong></p>
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 4px 12px;">3月20日，字节跳动推出Seedance2.0短剧Agent，支持10万字剧本一键生成，AIGC内容生产工具进入规模化落地阶段。</p>
+<p style="font-size:12px;font-style:italic;color:#999;line-height:1.5;margin:0 0 18px 0;">[字节跳动官方, 2026.03.20] [36氪, 2026.03.20] [虎嗅, 2026.03.20]</p>
+
+<hr style="border:none;height:1px;background-color:#e0ddd6;margin:18px 0;">
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 6px 0;"><strong style="color:#2d5a27;">03</strong>&nbsp; <strong style="color:#222222;">智谱发布全球首个龙虾大模型</strong></p>
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 4px 12px;">3月17日，智谱AI发布全球首个龙虾大模型，国内模型头部竞争持续加剧，垂直化与专业化成为差异化方向。</p>
+<p style="font-size:12px;font-style:italic;color:#999;line-height:1.5;margin:0 0 18px 0;">[智谱AI官方, 2026.03.17] [机器之心, 2026.03.17] [量子位, 2026.03.17]</p>
+
+<hr style="border:none;height:1px;background-color:#e0ddd6;margin:18px 0;">
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 6px 0;"><strong style="color:#2d5a27;">04</strong>&nbsp; <strong style="color:#222222;">英伟达GTC发布新一代推理芯片，黄仁勋：Token是新大宗商品</strong></p>
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 4px 12px;">3月18日，英伟达GTC大会发布新一代推理芯片，黄仁勋宣称Token是新大宗商品，算力投资逻辑从"训练算力"转向"推理算力"，全球AI基础设施竞赛进入新周期。</p>
+<p style="font-size:12px;font-style:italic;color:#999;line-height:1.5;margin:0 0 18px 0;">[Nvidia官方, 2026.03.18] [CNBC, 2026.03.18] [36氪, 2026.03.18] [The Verge, 2026.03.18]</p>
+
+<hr style="border:none;height:1px;background-color:#e0ddd6;margin:18px 0;">
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 6px 0;"><strong style="color:#2d5a27;">05</strong>&nbsp; <strong style="color:#222222;">宇树科技科创板IPO获受理，硬科技资本化提速</strong></p>
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 4px 12px;">3月23日，宇树科技科创板IPO申请获受理，招股书披露五大关键信息，上海AI算力独角兽冲刺上市，硬科技成为资本市场新避风港。</p>
+<p style="font-size:12px;font-style:italic;color:#999;line-height:1.5;margin:0 0 18px 0;">[上交所公告, 2026.03.23] [财新, 2026.03.23] [证券时报, 2026.03.23]</p>
+
+<hr style="border:none;height:1px;background-color:#e0ddd6;margin:18px 0;">
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 6px 0;"><strong style="color:#2d5a27;">06</strong>&nbsp; <strong style="color:#222222;">金融监管总局推进房地产新模式融资</strong></p>
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 4px 12px;">3月17日，金融监管总局推进房地产新模式融资，以白名单、资金封闭管理为核心，支持融资接续与风险隔离，政策性金融工具持续向存量风险化解倾斜。</p>
+<p style="font-size:12px;font-style:italic;color:#999;line-height:1.5;margin:0 0 18px 0;">[国家金融监督管理总局, 2026.03.17] [财联社, 2026.03.17] [新华社, 2026.03.17]</p>
+
+<hr style="border:none;height:1px;background-color:#e0ddd6;margin:18px 0;">
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 6px 0;"><strong style="color:#2d5a27;">07</strong>&nbsp; <strong style="color:#222222;">字节跳动出售沐瞳科技，聚焦AI与核心生态</strong></p>
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 4px 12px;">3月18日，字节跳动出售沐瞳科技全部股权，交易规模超400亿元，标志公司剥离非核心业务、回笼资源聚焦AI与核心生态，互联网巨头战略收缩趋势延续。</p>
+<p style="font-size:12px;font-style:italic;color:#999;line-height:1.5;margin:0 0 18px 0;">[Bloomberg, 2026.03.18] [财新, 2026.03.18] [虎嗅, 2026.03.18]</p>
+
+<hr style="border:none;height:1px;background-color:#e0ddd6;margin:18px 0;">
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 6px 0;"><strong style="color:#2d5a27;">08</strong>&nbsp; <strong style="color:#222222;">美国列中国平台入"恶名市场"名单，跨境合规摩擦加剧</strong></p>
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 4px 12px;">3月20日，美国对多国加征关税，并将百度、拼多多、抖音等平台列入美国贸易代表办公室恶名市场名单，跨境合规压力与贸易摩擦进一步加剧。</p>
+<p style="font-size:12px;font-style:italic;color:#999;line-height:1.5;margin:0 0 18px 0;">[USTR官网, 2026.03.20] [Reuters, 2026.03.20] [财联社, 2026.03.20]</p>
+
+<hr style="border:none;height:1px;background-color:#e0ddd6;margin:18px 0;">
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 6px 0;"><strong style="color:#2d5a27;">09</strong>&nbsp; <strong style="color:#222222;">三星宣布730亿美元AI芯片投资，算力供应链竞争升级</strong></p>
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 4px 12px;">3月19日，三星宣布730亿美元投资计划，聚焦AI芯片扩产，全球算力供应链竞争格局加速重塑，存储与逻辑芯片一体化趋势显现。</p>
+<p style="font-size:12px;font-style:italic;color:#999;line-height:1.5;margin:0 0 18px 0;">[Samsung官方, 2026.03.19] [Reuters, 2026.03.19] [韩联社, 2026.03.19]</p>
+
+<hr style="border:none;height:1px;background-color:#e0ddd6;margin:18px 0;">
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 6px 0;"><strong style="color:#2d5a27;">10</strong>&nbsp; <strong style="color:#222222;">风云四号C星投入业务运行</strong></p>
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 4px 12px;">3月21日，风云四号C星正式投入业务运行，空间观测与气象保障能力进一步增强，国家气象卫星体系建设稳步推进。</p>
+<p style="font-size:12px;font-style:italic;color:#999;line-height:1.5;margin:0 0 18px 0;">[中国气象局, 2026.03.21] [新华社, 2026.03.21] [中国航天科技集团, 2026.03.21]</p>
+
+<hr style="border:none;height:1px;background-color:#e0ddd6;margin:18px 0;">
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 6px 0;"><strong style="color:#2d5a27;">11</strong>&nbsp; <strong style="color:#222222;">捷龙三号海上发射成功，商业航天持续推进</strong></p>
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 4px 12px;">3月22日，捷龙三号海上发射成功，商业航天与卫星互联网建设稳步推进，低轨卫星组网进程加速。</p>
+<p style="font-size:12px;font-style:italic;color:#999;line-height:1.5;margin:0 0 18px 0;">[中国航天科技集团, 2026.03.22] [新华社, 2026.03.22] [航天新闻网, 2026.03.22]</p>
+
+<!-- ========== 暗涌 ========== -->
+<h2 style="font-size:17px;font-weight:700;color:#222222;line-height:1.5;margin:28px 0 4px 0;padding:0;border:none;">
+<span style="display:inline-block;width:4px;height:18px;background:#2d5a27;border-radius:2px;margin-right:8px;vertical-align:middle;"></span>暗涌</h2>
+<p style="font-size:12px;color:#888888;margin:0 0 4px 12px;">长期封锁下的合规重构与职业焦虑</p>
+<hr style="border:none;height:1px;background-color:#aec9ab;margin:0 0 18px 0;">
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 14px 0;"><strong style="color:#2d5a27;">能源贸易与法律争议</strong>&nbsp;&nbsp;&nbsp;霍尔木兹海峡危机持续近一个月，导致大量LNG运输合同触发"不可抗力"条款。国际贸易法律服务需求激增，焦点从"是否违约"转向"长期履约不能"的责任界定。</p>
+
+<hr style="border:none;height:1px;background-color:#e0ddd6;margin:14px 0;">
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 14px 0;"><strong style="color:#2d5a27;">3月23日市场启示</strong>&nbsp;&nbsp;&nbsp;全球资产在3月23日的同步暴跌表明，地缘政治风险已超越单一资产逻辑，成为影响全球定价的首要变量。市场对危机的"耐受度"正在降低，恐慌情绪取代了之前的观望态度。</p>
+
+<hr style="border:none;height:1px;background-color:#e0ddd6;margin:14px 0;">
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 14px 0;"><strong style="color:#2d5a27;">Agent权限与风险</strong>&nbsp;&nbsp;&nbsp;OpenClaw爆火后，AI Agent的权限管控、数据安全等合规风险成为行业核心痛点。企业需构建全链路合规体系，监管部门连续发文，合规进入强制实操期。</p>
+
+<hr style="border:none;height:1px;background-color:#e0ddd6;margin:14px 0;">
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 14px 0;"><strong style="color:#2d5a27;">AI对律师职业的重构</strong>&nbsp;&nbsp;&nbsp;AI将替代30%基础法律工作，律师向AI协作专家转型；AI重构法律服务商业模式，小所靠技术实现弯道超车，传统大所的规模优势正在被技术能力稀释。</p>
+
+<!-- ========== 声明区 ========== -->
+<p style="margin:28px 0 0;font-size:0;line-height:0;">&nbsp;</p>
+
+<section style="border-left:3px solid #2d5a27;background:#f4f8f3;padding:14px 16px;margin:0 0 12px 0;border-radius:0 6px 6px 0;">
+<p style="font-size:12px;color:#888888;line-height:1.75;margin:0 0 4px 0;"><strong style="color:#333333;font-size:13px;">本期辅助说明</strong></p>
+<p style="font-size:12px;color:#888888;line-height:1.75;margin:0;">本期信息采集自公开资讯及权威机构公告，所有法律解读均以官方公告、法律法规及权威司法判例为准，不构成任何投资建议或法律意见。</p>
+</section>
+
+<section style="border-left:3px solid #e0ddd6;background:#f8f7f4;padding:14px 16px;margin:0 0 24px 0;border-radius:0 6px 6px 0;">
+<p style="font-size:12px;color:#888888;line-height:1.75;margin:0 0 4px 0;"><strong style="color:#333333;font-size:13px;">声明</strong></p>
+<p style="font-size:12px;color:#888888;line-height:1.75;margin:0;">本文仅代表作者个人观察与分析，不构成任何法律意见或投资建议。文中引用的法律法规以官方公布文本为准。</p>
+</section>
+
+<!-- Footer -->
+<hr style="border:none;height:1px;background-color:#e0ddd6;margin:0;">
+<section style="text-align:center;padding:20px 0 8px;">
+<p style="font-size:15px;color:#2d5a27;font-weight:700;line-height:2;margin:0;">未来法域 · 全局观察</p>
+<p style="font-size:12px;color:#888888;line-height:1.8;margin:0 0 4px 0;">全图 · 降噪 · 法度 · 业相 · 归档实录 · ALL未来所</p>
+<p style="font-size:13px;color:#222222;font-weight:600;line-height:2;margin:0;">关注「未来法域」，不错过每一期全球法域与AI前沿动态</p>
+</section>
+
+</section>
+</section>
+
+<!-- Bottom accent bar -->
+<hr style="border:none;height:6px;background-color:#2d5a27;margin:0;">
+
+</section>
+</div>
+
+</body>
+</html>

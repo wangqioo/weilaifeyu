@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>归档实录 Vol.001 - 微信公众号粘贴版</title>
+<style>
+body { background: #f0f0f0; margin: 0; font-family: -apple-system, "PingFang SC", sans-serif; }
+.page-bar {
+  background: #722F37; color: #fff; text-align: center; padding: 14px 20px;
+  font-size: 13px; line-height: 1.6; position: sticky; top: 0; z-index: 100;
+}
+.page-bar button {
+  background: #fff; color: #722F37; border: none; padding: 8px 24px;
+  border-radius: 4px; font-size: 13px; font-weight: 600; cursor: pointer; margin-top: 8px;
+}
+.page-bar button:hover { background: #f7ecee; }
+.outer { max-width: 580px; margin: 20px auto; background: #fff; box-shadow: 0 1px 8px rgba(0,0,0,0.08); }
+</style>
+<script>
+async function copyContent() {
+  const el = document.getElementById('article');
+  const btn = document.getElementById('copyBtn');
+  try {
+    const html = el.outerHTML;
+    const text = el.innerText;
+    await navigator.clipboard.write([
+      new ClipboardItem({
+        'text/html': new Blob([html], { type: 'text/html' }),
+        'text/plain': new Blob([text], { type: 'text/plain' })
+      })
+    ]);
+    btn.textContent = 'Copied!';
+  } catch (e) {
+    const range = document.createRange();
+    range.selectNodeContents(el);
+    const sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+    document.execCommand('copy');
+    btn.textContent = 'Copied!';
+  }
+  setTimeout(() => { btn.textContent = '一键复制'; }, 2000);
+}
+</script>
+</head>
+<body>
+
+<div class="page-bar">
+  点击按钮复制富文本，然后粘贴到微信公众号编辑器<br>
+  <span style="opacity:0.7;font-size:11px">全部内联样式 | 栏目色：酒红 #722F37</span><br>
+  <button id="copyBtn" onclick="copyContent()">一键复制</button>
+</div>
+
+<div class="outer">
+<section id="article" style="padding:0;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif;font-size:15px;color:#333333;line-height:1.85;">
+
+<!-- Top accent bar -->
+<hr style="border:none;height:6px;background-color:#722F37;margin:0;">
+
+<!-- Header -->
+<section style="padding:24px 22px 16px;">
+
+<!-- Column tag -->
+<p style="margin:0 0 14px 0;">
+<span style="display:inline-block;background:#722F37;color:#ffffff;font-size:12px;font-weight:600;padding:3px 10px;border-radius:3px;letter-spacing:1px;">归档实录</span>
+<span style="display:inline-block;background:#f7ecee;color:#722F37;font-size:11px;font-weight:600;padding:3px 8px;border-radius:3px;margin-left:4px;border:1px solid #cda8ad;">·Memo／Case／Note…</span>
+<span style="display:inline-block;background:#f8f7f4;color:#888888;font-size:11px;padding:3px 8px;border-radius:3px;margin-left:4px;">Vol.001</span>
+</p>
+
+<!-- Title -->
+<h1 style="font-size:21px;font-weight:700;color:#222222;line-height:1.4;margin:0 0 6px 0;padding:0;">归档实录·[子标签]｜案件/事件标题：核心事实一句话</h1>
+
+<!-- Subtitle -->
+<p style="font-size:14px;color:#888888;line-height:1.5;margin:0 0 12px 0;">——从原始文件出发，还原一个具有历史价值的法律现场</p>
+
+<!-- Meta -->
+<p style="font-size:12px;color:#888888;line-height:1.5;margin:0 0 16px 0;">未来法域 · 归档实录 · [子标签] &nbsp;|&nbsp; 周五 19:30 &nbsp;|&nbsp; 2026.XX.XX</p>
+
+<!-- Terracotta divider -->
+<hr style="border:none;height:2px;background-color:#722F37;margin:0;">
+</section>
+
+<!-- Content body -->
+<section style="padding:0 22px 20px;">
+
+<!-- Lead -->
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">导语：此案/此事发生于何时何地，性质与背景是什么。为何值得归档——它承载哪种具有代表性的法律现象，或触发了哪种制度变革，或留下了哪种可供参照的样本。</p>
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">第二段：当年语境与现实关联。将历史事件与当下的制度演进或市场现实相连接，说明"为什么现在重读"的理由。</p>
+
+<!-- ========== 档案摘要卡 ========== -->
+<h2 style="font-size:17px;font-weight:700;color:#222222;line-height:1.5;margin:28px 0 4px 0;padding:0;border:none;">
+<span style="display:inline-block;width:4px;height:18px;background:#722F37;border-radius:2px;margin-right:8px;vertical-align:middle;"></span>档案摘要</h2>
+<hr style="border:none;height:1px;background-color:#cda8ad;margin:0 0 18px 0;">
+
+<!-- Archive summary card -->
+<section style="background:#f7ecee;border:1px solid #cda8ad;border-radius:8px;padding:16px 18px;margin:0 0 20px 0;">
+
+<p style="font-size:14px;font-weight:700;color:#222222;line-height:1.5;margin:0 0 12px 0;border-bottom:1px solid #cda8ad;padding-bottom:10px;">案件/事件编号或简称</p>
+
+<p style="margin:0 0 6px 0;font-size:13px;color:#555555;line-height:1.7;">
+<span style="display:inline-block;width:72px;color:#888888;font-size:12px;">时间跨度</span>XXXX年XX月 — XXXX年XX月
+</p>
+<p style="margin:0 0 6px 0;font-size:13px;color:#555555;line-height:1.7;">
+<span style="display:inline-block;width:72px;color:#888888;font-size:12px;">案件性质</span>行政处罚 / 司法判决 / 仲裁裁决 / 监管调查
+</p>
+<p style="margin:0 0 6px 0;font-size:13px;color:#555555;line-height:1.7;">
+<span style="display:inline-block;width:72px;color:#888888;font-size:12px;">主要主体</span>当事人或机构名称
+</p>
+<p style="margin:0 0 6px 0;font-size:13px;color:#555555;line-height:1.7;">
+<span style="display:inline-block;width:72px;color:#888888;font-size:12px;">管辖机构</span>法院 / 监管机关名称
+</p>
+<p style="margin:0 0 6px 0;font-size:13px;color:#555555;line-height:1.7;">
+<span style="display:inline-block;width:72px;color:#888888;font-size:12px;">结果</span>判决结果 / 处罚结果 / 和解方式
+</p>
+<p style="margin:0;font-size:13px;color:#555555;line-height:1.7;">
+<span style="display:inline-block;width:72px;color:#888888;font-size:12px;">档案来源</span>裁判文书网 / 证监会官网 / 公告
+</p>
+</section>
+
+<!-- ========== Section 1 ========== -->
+<h2 style="font-size:17px;font-weight:700;color:#222222;line-height:1.5;margin:28px 0 4px 0;padding:0;border:none;">
+<span style="display:inline-block;width:4px;height:18px;background:#722F37;border-radius:2px;margin-right:8px;vertical-align:middle;"></span>一、事件经过</h2>
+<hr style="border:none;height:1px;background-color:#cda8ad;margin:0 0 18px 0;">
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">叙述事件的完整经过。按时间顺序铺陈关键节点，注重客观还原：何人、何时、何事、何因。数据与引述均须有来源，推断须标注"据报道"或"依据公开信息"。</p>
+
+<!-- Chronology block -->
+<section style="margin:0 0 20px 0;padding:0 0 0 0;">
+
+<section style="border-left:2px solid #cda8ad;padding:0 0 16px 16px;position:relative;">
+<p style="font-size:12px;font-weight:700;color:#722F37;margin:0 0 4px 0;line-height:1.4;">XXXX年XX月</p>
+<p style="font-size:14px;color:#333333;line-height:1.75;margin:0;">时间节点一的事件描述。还原当时的关键决策或行为，以及直接后果。</p>
+</section>
+
+<section style="border-left:2px solid #cda8ad;padding:0 0 16px 16px;position:relative;">
+<p style="font-size:12px;font-weight:700;color:#722F37;margin:0 0 4px 0;line-height:1.4;">XXXX年XX月</p>
+<p style="font-size:14px;color:#333333;line-height:1.75;margin:0;">时间节点二的事件描述。转折点或新阶段的开始，与上一节点的因果关联。</p>
+</section>
+
+<section style="border-left:2px solid #cda8ad;padding:0 0 16px 16px;position:relative;">
+<p style="font-size:12px;font-weight:700;color:#722F37;margin:0 0 4px 0;line-height:1.4;">XXXX年XX月</p>
+<p style="font-size:14px;color:#333333;line-height:1.75;margin:0;">时间节点三。关键处置措施或裁决，标志性结果的出现。</p>
+</section>
+
+<section style="border-left:2px solid #cda8ad;padding:0 0 0 16px;position:relative;">
+<p style="font-size:12px;font-weight:700;color:#722F37;margin:0 0 4px 0;line-height:1.4;">XXXX年XX月</p>
+<p style="font-size:14px;color:#333333;line-height:1.75;margin:0;">最终结果。事件的终结形式，以及后续影响的起点。</p>
+</section>
+
+</section>
+
+<!-- ========== Section 2 ========== -->
+<h2 style="font-size:17px;font-weight:700;color:#222222;line-height:1.5;margin:28px 0 4px 0;padding:0;border:none;">
+<span style="display:inline-block;width:4px;height:18px;background:#722F37;border-radius:2px;margin-right:8px;vertical-align:middle;"></span>二、原始文件摘录</h2>
+<hr style="border:none;height:1px;background-color:#cda8ad;margin:0 0 18px 0;">
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">归档实录栏目以原始文件为核心。本节摘录关键文件的核心条文、裁判论据或监管表述，并在摘录后作简短注释，说明其在整体事件中的位置与意义。</p>
+
+<!-- Primary source block 1 -->
+<section style="margin:0 0 20px 0;">
+<p style="font-size:12px;font-weight:700;color:#722F37;letter-spacing:0.5px;margin:0 0 8px 0;line-height:1.4;">文件一：文件名称（时间 · 来源机构）</p>
+<section style="border-left:3px solid #722F37;background:#f7ecee;padding:14px 16px;border-radius:0 6px 6px 0;">
+<p style="font-size:13px;color:#444444;line-height:1.8;margin:0;font-style:italic;">「……原文摘录。保持文件原始措辞，不作改动。引号或书名号视原文而定。最多两段，以省略号标注省略部分……」</p>
+</section>
+<p style="font-size:12px;color:#888888;line-height:1.7;margin:8px 0 0 0;">注：此条文/此段论述的核心意义在于——简要说明该摘录的法律地位或历史价值。</p>
+</section>
+
+<!-- Primary source block 2 -->
+<section style="margin:0 0 20px 0;">
+<p style="font-size:12px;font-weight:700;color:#722F37;letter-spacing:0.5px;margin:0 0 8px 0;line-height:1.4;">文件二：文件名称（时间 · 来源机构）</p>
+<section style="border-left:3px solid #722F37;background:#f7ecee;padding:14px 16px;border-radius:0 6px 6px 0;">
+<p style="font-size:13px;color:#444444;line-height:1.8;margin:0;font-style:italic;">「……第二份文件摘录。可以是对应的回应文件、上诉裁定，或后续政策文本，与文件一形成对照或递进关系……」</p>
+</section>
+<p style="font-size:12px;color:#888888;line-height:1.7;margin:8px 0 0 0;">注：与文件一的关联性，或该文件在制度演进中的标志意义。</p>
+</section>
+
+<!-- ========== Section 3 ========== -->
+<h2 style="font-size:17px;font-weight:700;color:#222222;line-height:1.5;margin:28px 0 4px 0;padding:0;border:none;">
+<span style="display:inline-block;width:4px;height:18px;background:#722F37;border-radius:2px;margin-right:8px;vertical-align:middle;"></span>三、制度意义与回响</h2>
+<hr style="border:none;height:1px;background-color:#cda8ad;margin:0 0 18px 0;">
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">本节跳出事件本身，分析其在制度史上的位置：它开创了什么先例，堵上了哪个漏洞，或者反向暴露了哪种规则的内在矛盾？</p>
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">第二段：事后回响。该案/该事件是否催生了新规？是否在此后被援引为参照先例？相关主体命运如何？市场或监管格局发生了何种变化？</p>
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">第三段：当下视角。以今日眼光重读，该事件的哪些层面仍具现实意义？哪些结论被后续实践所证伪或修正？</p>
+
+<!-- Closing quote -->
+<section style="border-left:3px solid #722F37;background:#f7ecee;padding:14px 16px;margin:0 0 20px 0;border-radius:0 6px 6px 0;">
+<p style="font-size:14px;color:#444444;line-height:1.8;margin:0 0 6px 0;"><strong style="color:#722F37;">档案的意义，在于让已结案的事件继续说话。</strong>它不仅记录了"发生了什么"，更保存了"当时的人如何理解规则"——而这恰恰是今日立法者、执法者与实务者最难复原的东西。</p>
+</section>
+
+</section>
+
+<!-- ========== 声明区 ========== -->
+<section style="padding:0 22px;">
+
+<section style="border-left:3px solid #722F37;background:#f7ecee;padding:14px 16px;margin:24px 0 12px 0;border-radius:0 6px 6px 0;">
+<p style="font-size:12px;color:#888888;line-height:1.75;margin:0 0 4px 0;"><strong style="color:#333333;font-size:13px;">AI辅助声明</strong></p>
+<p style="font-size:12px;color:#888888;line-height:1.75;margin:0;">本文由AI辅助完成信息采集与初稿生成，经人工审校、调序与深度改写后发布。事实性内容以原始来源为准。AI工具：Claude、豆包。</p>
+</section>
+
+<section style="border-left:3px solid #e0ddd6;background:#f8f7f4;padding:14px 16px;margin:0 0 24px 0;border-radius:0 6px 6px 0;">
+<p style="font-size:12px;color:#888888;line-height:1.75;margin:0 0 4px 0;"><strong style="color:#333333;font-size:13px;">声明</strong></p>
+<p style="font-size:12px;color:#888888;line-height:1.75;margin:0;">本文仅代表作者个人观察与分析，不构成任何法律意见或投资建议。文中引用的法律法规以官方公布文本为准。</p>
+</section>
+
+</section>
+
+<!-- Footer -->
+<section style="padding:0 22px 20px;">
+<hr style="border:none;height:1px;background-color:#e0ddd6;margin:0 0 20px 0;">
+<section style="text-align:center;padding:0 0 8px;">
+<p style="font-size:15px;color:#722F37;font-weight:700;line-height:2;margin:0;">未来法域 · 全局观察</p>
+<p style="font-size:12px;color:#888888;line-height:1.8;margin:0 0 4px 0;">全图 · 降噪 · 法度 · 业相 · 归档实录 · ALL未来所</p>
+<p style="font-size:13px;color:#222222;font-weight:600;line-height:2;margin:0;">关注「未来法域」，不错过每一期</p>
+</section>
+</section>
+
+<!-- Bottom accent bar -->
+<hr style="border:none;height:6px;background-color:#722F37;margin:0;">
+
+</section>
+</div>
+
+</body>
+</html>

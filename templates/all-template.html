@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ALL未来所 Vol.001 - 微信公众号粘贴版</title>
+<style>
+body { background: #f0f0f0; margin: 0; font-family: -apple-system, "PingFang SC", sans-serif; }
+.page-bar {
+  background: #3a3a3a; color: #fff; text-align: center; padding: 14px 20px;
+  font-size: 13px; line-height: 1.6; position: sticky; top: 0; z-index: 100;
+}
+.page-bar button {
+  background: #fff; color: #3a3a3a; border: none; padding: 8px 24px;
+  border-radius: 4px; font-size: 13px; font-weight: 600; cursor: pointer; margin-top: 8px;
+}
+.page-bar button:hover { background: #f5f5f4; }
+.outer { max-width: 580px; margin: 20px auto; background: #fff; box-shadow: 0 1px 8px rgba(0,0,0,0.08); }
+</style>
+<script>
+async function copyContent() {
+  const el = document.getElementById('article');
+  const btn = document.getElementById('copyBtn');
+  try {
+    const html = el.outerHTML;
+    const text = el.innerText;
+    await navigator.clipboard.write([
+      new ClipboardItem({
+        'text/html': new Blob([html], { type: 'text/html' }),
+        'text/plain': new Blob([text], { type: 'text/plain' })
+      })
+    ]);
+    btn.textContent = 'Copied!';
+  } catch (e) {
+    const range = document.createRange();
+    range.selectNodeContents(el);
+    const sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+    document.execCommand('copy');
+    btn.textContent = 'Copied!';
+  }
+  setTimeout(() => { btn.textContent = '一键复制'; }, 2000);
+}
+</script>
+</head>
+<body>
+
+<div class="page-bar">
+  点击按钮复制富文本，然后粘贴到微信公众号编辑器<br>
+  <span style="opacity:0.7;font-size:11px">全部内联样式 | 栏目色：炭黑 #3a3a3a</span><br>
+  <button id="copyBtn" onclick="copyContent()">一键复制</button>
+</div>
+
+<div class="outer">
+<section id="article" style="padding:0;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif;font-size:15px;color:#333333;line-height:1.85;">
+
+<!-- Top accent bar -->
+<hr style="border:none;height:6px;background-color:#3a3a3a;margin:0;">
+
+<!-- Header -->
+<section style="padding:24px 22px 16px;">
+
+<!-- Column tag -->
+<p style="margin:0 0 14px 0;">
+<span style="display:inline-block;background:#3a3a3a;color:#ffffff;font-size:12px;font-weight:600;padding:3px 10px;border-radius:3px;letter-spacing:1px;">ALL 未来所</span>
+<span style="display:inline-block;background:#f5f5f4;color:#3a3a3a;font-size:11px;font-weight:600;padding:3px 8px;border-radius:3px;margin-left:4px;border:1px solid #c0bdb8;">·实验台／逆向舱／观测站…</span>
+<span style="display:inline-block;background:#f8f7f4;color:#888888;font-size:11px;padding:3px 8px;border-radius:3px;margin-left:4px;">Vol.001</span>
+</p>
+
+<!-- Title -->
+<h1 style="font-size:21px;font-weight:700;color:#222222;line-height:1.4;margin:0 0 6px 0;padding:0;">ALL未来所·[子标签]｜命题标题：关于法律实践未来形态的核心问题</h1>
+
+<!-- Subtitle -->
+<p style="font-size:14px;color:#888888;line-height:1.5;margin:0 0 12px 0;">——副标题：一个具体切口，或一种反直觉的视角</p>
+
+<!-- Meta -->
+<p style="font-size:12px;color:#888888;line-height:1.5;margin:0 0 16px 0;">未来法域 · ALL未来所 · [子标签] &nbsp;|&nbsp; 周六 19:30 &nbsp;|&nbsp; 2026.XX.XX</p>
+
+<!-- Charcoal divider -->
+<hr style="border:none;height:2px;background-color:#3a3a3a;margin:0;">
+</section>
+
+<!-- Content body -->
+<section style="padding:0 22px 20px;">
+
+<!-- Lead -->
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">导语：ALL未来所以思想实验为方法，以法律从业者的未来处境为题材。本期的核心命题是什么？它对应哪种真实的结构性张力，或哪个已经开始发生但尚未被清晰命名的变化？</p>
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">第二段：为什么是现在提出这个问题？此命题的触发背景——可以是某个技术节点、某种监管信号、某份报告数据，或某种无法回避的结构性趋势。</p>
+
+<!-- ========== 核心命题 ========== -->
+<h2 style="font-size:17px;font-weight:700;color:#222222;line-height:1.5;margin:28px 0 4px 0;padding:0;border:none;">
+<span style="display:inline-block;width:4px;height:18px;background:#3a3a3a;border-radius:2px;margin-right:8px;vertical-align:middle;"></span>核心命题</h2>
+<hr style="border:none;height:1px;background-color:#c0bdb8;margin:0 0 18px 0;">
+
+<!-- Central thesis box -->
+<section style="background:#f5f5f4;border:1px solid #d0ccc8;border-radius:8px;padding:20px 20px;margin:0 0 20px 0;text-align:center;">
+<p style="font-size:18px;font-weight:700;color:#222222;line-height:1.6;margin:0 0 10px 0;">核心命题陈述：</p>
+<p style="font-size:16px;color:#3a3a3a;line-height:1.7;margin:0;font-style:normal;">「在[某种条件]成立的前提下，[某种职能/角色/制度]将[发生某种转变]，而[某种能力/结构/逻辑]则将成为新的核心锚点。」</p>
+</section>
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">对核心命题的拆解说明。命题并不是预言，而是一种结构性假设——说明其前提条件、适用边界，以及它所对抗的通行假设。</p>
+
+<!-- ========== Section 1 ========== -->
+<h2 style="font-size:17px;font-weight:700;color:#222222;line-height:1.5;margin:28px 0 4px 0;padding:0;border:none;">
+<span style="display:inline-block;width:4px;height:18px;background:#3a3a3a;border-radius:2px;margin-right:8px;vertical-align:middle;"></span>一、现状：已经在发生的事</h2>
+<hr style="border:none;height:1px;background-color:#c0bdb8;margin:0 0 18px 0;">
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">从已有证据出发。哪些真实发生的现象或数据，支撑着核心命题的前提假设？不需要证明命题成立，只需展示"信号已经存在"。</p>
+
+<!-- Evidence chips -->
+<p style="margin:0 0 16px 0;line-height:2.4;">
+<span style="display:inline-block;background:#f5f5f4;color:#3a3a3a;font-size:12px;font-weight:600;border:1px solid #d0ccc8;border-radius:4px;padding:4px 12px;margin:2px 6px 2px 0;">信号一：关键词</span>
+<span style="display:inline-block;background:#f5f5f4;color:#3a3a3a;font-size:12px;font-weight:600;border:1px solid #d0ccc8;border-radius:4px;padding:4px 12px;margin:2px 6px 2px 0;">信号二：关键词</span>
+<span style="display:inline-block;background:#f5f5f4;color:#3a3a3a;font-size:12px;font-weight:600;border:1px solid #d0ccc8;border-radius:4px;padding:4px 12px;margin:2px 6px 2px 0;">信号三：关键词</span>
+<span style="display:inline-block;background:#f5f5f4;color:#3a3a3a;font-size:12px;font-weight:600;border:1px solid #d0ccc8;border-radius:4px;padding:4px 12px;margin:2px 6px 2px 0;">信号四：关键词</span>
+</p>
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">对上述信号的简要说明。每个信号对应什么真实动态，数据来源或典型案例是什么。不展开，点到为止。</p>
+
+<!-- ========== Section 2 ========== -->
+<h2 style="font-size:17px;font-weight:700;color:#222222;line-height:1.5;margin:28px 0 4px 0;padding:0;border:none;">
+<span style="display:inline-block;width:4px;height:18px;background:#3a3a3a;border-radius:2px;margin-right:8px;vertical-align:middle;"></span>二、推演：如果命题成立</h2>
+<hr style="border:none;height:1px;background-color:#c0bdb8;margin:0 0 18px 0;">
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">思想实验的核心部分。假设核心命题成立，顺着这一逻辑推演：谁受益，谁受损；哪种能力变得更有价值，哪种能力被边缘化；哪种组织形态更适应，哪种被淘汰。</p>
+
+<!-- Consequence pairs table using divs -->
+<section style="margin:0 0 20px 0;">
+
+<!-- Row 1 -->
+<section style="display:table;width:100%;border-collapse:separate;border-spacing:0 8px;">
+
+<section style="display:table-row;">
+<section style="display:table-cell;width:50%;padding:12px 14px;background:#f5f5f4;border:1px solid #d0ccc8;border-radius:6px 0 0 6px;vertical-align:top;">
+<p style="font-size:12px;font-weight:700;color:#888888;margin:0 0 6px 0;letter-spacing:0.5px;">价值上升</p>
+<p style="font-size:13px;color:#333333;line-height:1.7;margin:0;">在命题成立的世界中，哪种能力/角色/机构将获得更高溢价或更强不可替代性？</p>
+</section>
+<section style="display:table-cell;width:50%;padding:12px 14px;background:#3a3a3a;border:1px solid #3a3a3a;border-radius:0 6px 6px 0;vertical-align:top;">
+<p style="font-size:12px;font-weight:700;color:#aaaaaa;margin:0 0 6px 0;letter-spacing:0.5px;">价值下降</p>
+<p style="font-size:13px;color:#eeeeee;line-height:1.7;margin:0;">对应地，哪种能力/角色/机构将面临系统性替代或边缘化压力？</p>
+</section>
+</section>
+
+</section>
+
+</section>
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">进一步推演。若命题成立，对从业者的日常实践意味着什么？对机构的组织设计意味着什么？对法律教育或职业准入制度意味着什么？</p>
+
+<!-- ========== Section 3 ========== -->
+<h2 style="font-size:17px;font-weight:700;color:#222222;line-height:1.5;margin:28px 0 4px 0;padding:0;border:none;">
+<span style="display:inline-block;width:4px;height:18px;background:#3a3a3a;border-radius:2px;margin-right:8px;vertical-align:middle;"></span>三、质疑：命题可能失效的条件</h2>
+<hr style="border:none;height:1px;background-color:#c0bdb8;margin:0 0 18px 0;">
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">思想实验须承受质疑。在哪些条件下，核心命题不成立？什么反向力量可能阻止或延缓所推演的变化？哪些结构性摩擦会让现状比预期更具惰性？</p>
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">第二段：对质疑条件的回应。承认质疑的合理性，同时指出命题的成立并不依赖于排除这些质疑——它只是在说，无论如何，准备总比不准备更好。</p>
+
+<!-- Counter-argument block -->
+<section style="border-left:3px solid #3a3a3a;background:#f5f5f4;padding:14px 16px;margin:0 0 20px 0;border-radius:0 6px 6px 0;">
+<p style="font-size:14px;color:#555555;line-height:1.8;margin:0 0 6px 0;"><strong style="color:#3a3a3a;">最强反驳：</strong>对核心命题最有力的一句话反驳。诚实地陈述，不回避。</p>
+<p style="font-size:14px;color:#555555;line-height:1.8;margin:0;"><strong style="color:#3a3a3a;">作者回应：</strong>对上述反驳的回应。不试图完全推翻，而是划定命题的适用边界。</p>
+</section>
+
+<!-- ========== Section 4 ========== -->
+<h2 style="font-size:17px;font-weight:700;color:#222222;line-height:1.5;margin:28px 0 4px 0;padding:0;border:none;">
+<span style="display:inline-block;width:4px;height:18px;background:#3a3a3a;border-radius:2px;margin-right:8px;vertical-align:middle;"></span>四、行动坐标</h2>
+<hr style="border:none;height:1px;background-color:#c0bdb8;margin:0 0 18px 0;">
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">ALL未来所不止于思想，也关注行动。如果接受命题的核心逻辑，从业者现在可以做什么？不是操作手册，而是方向性的坐标。</p>
+
+<!-- Action points -->
+<section style="background:#f5f5f4;border:1px solid #d0ccc8;border-radius:8px;padding:16px 18px;margin:0 0 20px 0;">
+<p style="font-size:13px;color:#333333;line-height:1.85;margin:0 0 8px 0;padding-left:20px;text-indent:-20px;"><span style="font-weight:700;color:#3a3a3a;margin-right:8px;">01</span>行动方向一。一句话说清楚做什么，以及这个行动如何响应命题所揭示的变化。</p>
+<p style="font-size:13px;color:#333333;line-height:1.85;margin:0 0 8px 0;padding-left:20px;text-indent:-20px;"><span style="font-weight:700;color:#3a3a3a;margin-right:8px;">02</span>行动方向二。面向机构层面的建议，或面向个人能力建设的具体方向。</p>
+<p style="font-size:13px;color:#333333;line-height:1.85;margin:0 0 8px 0;padding-left:20px;text-indent:-20px;"><span style="font-weight:700;color:#3a3a3a;margin-right:8px;">03</span>行动方向三。需要关注的信号或指标，以判断命题走向是否在加速或转向。</p>
+<p style="font-size:13px;color:#333333;line-height:1.85;margin:0;padding-left:20px;text-indent:-20px;"><span style="font-weight:700;color:#3a3a3a;margin-right:8px;">04</span>行动方向四。保留选项：在不确定条件下，如何保持战略灵活性而不提前锁死。</p>
+</section>
+
+<!-- Closing statement -->
+<section style="border-left:3px solid #3a3a3a;background:#f5f5f4;padding:14px 16px;margin:0 0 20px 0;border-radius:0 6px 6px 0;">
+<p style="font-size:14px;color:#444444;line-height:1.8;margin:0;"><strong style="color:#3a3a3a;">结语：</strong>ALL未来所不预言，只推演。它的价值不在于"说对了"，而在于帮助从业者在不确定性中，提前建立一套可供检验的认知框架。</p>
+</section>
+
+</section>
+
+<!-- ========== 声明区 ========== -->
+<section style="padding:0 22px;">
+
+<section style="border-left:3px solid #3a3a3a;background:#f5f5f4;padding:14px 16px;margin:24px 0 12px 0;border-radius:0 6px 6px 0;">
+<p style="font-size:12px;color:#888888;line-height:1.75;margin:0 0 4px 0;"><strong style="color:#333333;font-size:13px;">AI辅助声明</strong></p>
+<p style="font-size:12px;color:#888888;line-height:1.75;margin:0;">本文由AI辅助完成信息采集与初稿生成，经人工审校、调序与深度改写后发布。事实性内容以原始来源为准。AI工具：Claude、豆包。</p>
+</section>
+
+<section style="border-left:3px solid #e0ddd6;background:#f8f7f4;padding:14px 16px;margin:0 0 24px 0;border-radius:0 6px 6px 0;">
+<p style="font-size:12px;color:#888888;line-height:1.75;margin:0 0 4px 0;"><strong style="color:#333333;font-size:13px;">声明</strong></p>
+<p style="font-size:12px;color:#888888;line-height:1.75;margin:0;">本文仅代表作者个人观察与分析，不构成任何法律意见或投资建议。文中引用的法律法规以官方公布文本为准。</p>
+</section>
+
+</section>
+
+<!-- Footer -->
+<section style="padding:0 22px 20px;">
+<hr style="border:none;height:1px;background-color:#e0ddd6;margin:0 0 20px 0;">
+<section style="text-align:center;padding:0 0 8px;">
+<p style="font-size:15px;color:#3a3a3a;font-weight:700;line-height:2;margin:0;">未来法域 · 全局观察</p>
+<p style="font-size:12px;color:#888888;line-height:1.8;margin:0 0 4px 0;">全图 · 降噪 · 法度 · 业相 · 归档实录 · ALL未来所</p>
+<p style="font-size:13px;color:#222222;font-weight:600;line-height:2;margin:0;">关注「未来法域」，不错过每一期</p>
+</section>
+</section>
+
+<!-- Bottom accent bar -->
+<hr style="border:none;height:6px;background-color:#3a3a3a;margin:0;">
+
+</section>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>业相 Vol.001 - 微信公众号粘贴版</title>
+<style>
+body { background: #f0f0f0; margin: 0; font-family: -apple-system, "PingFang SC", sans-serif; }
+.page-bar {
+  background: #6b5fa0; color: #fff; text-align: center; padding: 14px 20px;
+  font-size: 13px; line-height: 1.6; position: sticky; top: 0; z-index: 100;
+}
+.page-bar button {
+  background: #fff; color: #6b5fa0; border: none; padding: 8px 24px;
+  border-radius: 4px; font-size: 13px; font-weight: 600; cursor: pointer; margin-top: 8px;
+}
+.page-bar button:hover { background: #eeeaf8; }
+.outer { max-width: 580px; margin: 20px auto; background: #fff; box-shadow: 0 1px 8px rgba(0,0,0,0.08); }
+</style>
+<script>
+async function copyContent() {
+  const el = document.getElementById('article');
+  const btn = document.getElementById('copyBtn');
+  try {
+    const html = el.outerHTML;
+    const text = el.innerText;
+    await navigator.clipboard.write([
+      new ClipboardItem({
+        'text/html': new Blob([html], { type: 'text/html' }),
+        'text/plain': new Blob([text], { type: 'text/plain' })
+      })
+    ]);
+    btn.textContent = 'Copied!';
+  } catch (e) {
+    const range = document.createRange();
+    range.selectNodeContents(el);
+    const sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+    document.execCommand('copy');
+    btn.textContent = 'Copied!';
+  }
+  setTimeout(() => { btn.textContent = '一键复制'; }, 2000);
+}
+</script>
+</head>
+<body>
+
+<div class="page-bar">
+  点击按钮复制富文本，然后粘贴到微信公众号编辑器<br>
+  <span style="opacity:0.7;font-size:11px">全部内联样式 | 栏目色：紫色 #6b5fa0</span><br>
+  <button id="copyBtn" onclick="copyContent()">一键复制</button>
+</div>
+
+<div class="outer">
+<section id="article" style="padding:0;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif;font-size:15px;color:#333333;line-height:1.85;">
+
+<!-- Top accent bar -->
+<hr style="border:none;height:6px;background-color:#6b5fa0;margin:0;">
+
+<!-- Header -->
+<section style="padding:24px 22px 16px;">
+
+<!-- Column tag -->
+<p style="margin:0 0 14px 0;">
+<span style="display:inline-block;background:#6b5fa0;color:#ffffff;font-size:12px;font-weight:600;padding:3px 10px;border-radius:3px;letter-spacing:1px;">业相</span>
+<span style="display:inline-block;background:#eeeaf8;color:#6b5fa0;font-size:11px;font-weight:600;padding:3px 8px;border-radius:3px;margin-left:4px;border:1px solid #c4bde8;">·格局／对话／观察</span>
+<span style="display:inline-block;background:#f8f7f4;color:#888888;font-size:11px;padding:3px 8px;border-radius:3px;margin-left:4px;">Vol.001</span>
+</p>
+
+<!-- Title -->
+<h1 style="font-size:21px;font-weight:700;color:#222222;line-height:1.4;margin:0 0 6px 0;padding:0;">业相·[子标签]｜标题占位：主体名称与核心议题</h1>
+
+<!-- Subtitle -->
+<p style="font-size:14px;color:#888888;line-height:1.5;margin:0 0 12px 0;">——副标题：一句话点出切入角度或核心结论</p>
+
+<!-- Meta -->
+<p style="font-size:12px;color:#888888;line-height:1.5;margin:0 0 16px 0;">未来法域 · 业相 · [子标签] &nbsp;|&nbsp; 周四 16:30 &nbsp;|&nbsp; 2026.XX.XX</p>
+
+<!-- Purple divider -->
+<hr style="border:none;height:2px;background-color:#6b5fa0;margin:0;">
+</section>
+
+<!-- Content body -->
+<section style="padding:0 22px 20px;">
+
+<!-- Lead -->
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">导语段落。简述本期观察对象的背景、本文的切入时机与核心问题意识。两到三句话，点出行业现象，引出主体叙事。</p>
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">第二段导语。进一步定位观察主体的市场位置，或点出本文与市场通行叙事的差异所在。</p>
+
+<!-- ========== 主体档案卡 ========== -->
+<h2 style="font-size:17px;font-weight:700;color:#222222;line-height:1.5;margin:28px 0 4px 0;padding:0;border:none;">
+<span style="display:inline-block;width:4px;height:18px;background:#6b5fa0;border-radius:2px;margin-right:8px;vertical-align:middle;"></span>档案：基本面</h2>
+<hr style="border:none;height:1px;background-color:#c4bde8;margin:0 0 18px 0;">
+
+<!-- Profile card -->
+<section style="background:#f8f7f4;border:1px solid #e0ddd6;border-radius:8px;padding:16px 18px;margin:0 0 20px 0;">
+
+<!-- Name row -->
+<p style="font-size:14px;font-weight:700;color:#222222;line-height:1.5;margin:0 0 12px 0;border-bottom:1px solid #e0ddd6;padding-bottom:10px;">主体名称（中英文）</p>
+
+<!-- Two-col info table using display:table -->
+<p style="margin:0 0 6px 0;font-size:13px;color:#555555;line-height:1.7;">
+<span style="display:inline-block;width:72px;color:#888888;font-size:12px;">类型</span>律师事务所 / 科技公司 / 法律服务机构
+</p>
+<p style="margin:0 0 6px 0;font-size:13px;color:#555555;line-height:1.7;">
+<span style="display:inline-block;width:72px;color:#888888;font-size:12px;">成立时间</span>XXXX 年
+</p>
+<p style="margin:0 0 6px 0;font-size:13px;color:#555555;line-height:1.7;">
+<span style="display:inline-block;width:72px;color:#888888;font-size:12px;">注册地/总部</span>XX 省 / XX 市
+</p>
+<p style="margin:0 0 6px 0;font-size:13px;color:#555555;line-height:1.7;">
+<span style="display:inline-block;width:72px;color:#888888;font-size:12px;">规模</span>合伙人 XX 人 / 律师 XXX 人
+</p>
+<p style="margin:0 0 6px 0;font-size:13px;color:#555555;line-height:1.7;">
+<span style="display:inline-block;width:72px;color:#888888;font-size:12px;">核心业务</span>资本市场 · 并购 · 科技监管
+</p>
+<p style="margin:0;font-size:13px;color:#555555;line-height:1.7;">
+<span style="display:inline-block;width:72px;color:#888888;font-size:12px;">观察时间</span>2026 年 Q1
+</p>
+</section>
+
+<!-- Keyword chips -->
+<p style="margin:0 0 20px 0;line-height:2.2;">
+<span style="display:inline-block;background:#eeeaf8;color:#6b5fa0;font-size:11px;font-weight:600;border-radius:20px;padding:3px 12px;margin:2px 4px 2px 0;">关键词一</span>
+<span style="display:inline-block;background:#eeeaf8;color:#6b5fa0;font-size:11px;font-weight:600;border-radius:20px;padding:3px 12px;margin:2px 4px 2px 0;">关键词二</span>
+<span style="display:inline-block;background:#eeeaf8;color:#6b5fa0;font-size:11px;font-weight:600;border-radius:20px;padding:3px 12px;margin:2px 4px 2px 0;">关键词三</span>
+<span style="display:inline-block;background:#eeeaf8;color:#6b5fa0;font-size:11px;font-weight:600;border-radius:20px;padding:3px 12px;margin:2px 4px 2px 0;">关键词四</span>
+</p>
+
+<!-- ========== Section 1 ========== -->
+<h2 style="font-size:17px;font-weight:700;color:#222222;line-height:1.5;margin:28px 0 4px 0;padding:0;border:none;">
+<span style="display:inline-block;width:4px;height:18px;background:#6b5fa0;border-radius:2px;margin-right:8px;vertical-align:middle;"></span>一、历史沿革与战略定位</h2>
+<hr style="border:none;height:1px;background-color:#c4bde8;margin:0 0 18px 0;">
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">本节叙述主体的创立背景、关键历史节点、以及在行业格局中的定位演变。可以包含机构的战略转向、核心业务的形成逻辑，或与市场整体格局的互动关系。</p>
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">第二段：具体历史节点。例：XXXX年，XX完成战略并购，业务重心由X向Y转移，奠定其在XX领域的头部地位。</p>
+
+<!-- Timeline block -->
+<section style="margin:0 0 20px 0;">
+
+<section style="display:flex;align-items:flex-start;margin-bottom:12px;">
+<span style="display:inline-block;min-width:64px;font-size:12px;color:#888888;font-weight:600;padding-top:2px;">XXXX年</span>
+<section style="flex:1;border-left:2px solid #c4bde8;padding-left:12px;">
+<p style="font-size:14px;color:#333333;line-height:1.7;margin:0;">里程碑事件描述。关键节点的标志意义一句话总结。</p>
+</section>
+</section>
+
+<section style="display:flex;align-items:flex-start;margin-bottom:12px;">
+<span style="display:inline-block;min-width:64px;font-size:12px;color:#888888;font-weight:600;padding-top:2px;">XXXX年</span>
+<section style="flex:1;border-left:2px solid #c4bde8;padding-left:12px;">
+<p style="font-size:14px;color:#333333;line-height:1.7;margin:0;">第二个里程碑事件描述。与上一节点的递进关系。</p>
+</section>
+</section>
+
+<section style="display:flex;align-items:flex-start;margin-bottom:0;">
+<span style="display:inline-block;min-width:64px;font-size:12px;color:#888888;font-weight:600;padding-top:2px;">XXXX年</span>
+<section style="flex:1;border-left:2px solid #c4bde8;padding-left:12px;">
+<p style="font-size:14px;color:#333333;line-height:1.7;margin:0;">第三个里程碑事件。现阶段定位与战略方向的起点。</p>
+</section>
+</section>
+
+</section>
+
+<!-- ========== Section 2 ========== -->
+<h2 style="font-size:17px;font-weight:700;color:#222222;line-height:1.5;margin:28px 0 4px 0;padding:0;border:none;">
+<span style="display:inline-block;width:4px;height:18px;background:#6b5fa0;border-radius:2px;margin-right:8px;vertical-align:middle;"></span>二、业务结构与核心能力</h2>
+<hr style="border:none;height:1px;background-color:#c4bde8;margin:0 0 18px 0;">
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">本节分析主体当前的业务布局、核心竞争力，以及在市场中与同类机构的差异化所在。</p>
+
+<!-- Vertical cards for business lines -->
+<section style="background:#eeeaf8;border:1px solid #c4bde8;border-radius:8px;padding:14px 16px;margin:0 0 10px 0;">
+<p style="font-size:13px;font-weight:700;color:#6b5fa0;line-height:1.5;margin:0 0 6px 0;">业务线一：业务名称</p>
+<p style="font-size:13px;color:#444444;line-height:1.75;margin:0;">业务线描述。核心客群、典型案例类型、市场份额或代表性数据。两三句话，聚焦核心竞争力而非泛泛介绍。</p>
+</section>
+
+<section style="background:#eeeaf8;border:1px solid #c4bde8;border-radius:8px;padding:14px 16px;margin:0 0 10px 0;">
+<p style="font-size:13px;font-weight:700;color:#6b5fa0;line-height:1.5;margin:0 0 6px 0;">业务线二：业务名称</p>
+<p style="font-size:13px;color:#444444;line-height:1.75;margin:0;">业务线描述。近年战略转型方向，新兴业务与传统业务的协同逻辑，或重点突破领域。</p>
+</section>
+
+<section style="background:#eeeaf8;border:1px solid #c4bde8;border-radius:8px;padding:14px 16px;margin:0 0 20px 0;">
+<p style="font-size:13px;font-weight:700;color:#6b5fa0;line-height:1.5;margin:0 0 6px 0;">业务线三：业务名称</p>
+<p style="font-size:13px;color:#444444;line-height:1.75;margin:0;">业务线描述。在法律科技或监管趋势驱动下，新兴业务的探索路径与阶段性成果。</p>
+</section>
+
+<!-- ========== Section 3 ========== -->
+<h2 style="font-size:17px;font-weight:700;color:#222222;line-height:1.5;margin:28px 0 4px 0;padding:0;border:none;">
+<span style="display:inline-block;width:4px;height:18px;background:#6b5fa0;border-radius:2px;margin-right:8px;vertical-align:middle;"></span>三、当前动向与观察焦点</h2>
+<hr style="border:none;height:1px;background-color:#c4bde8;margin:0 0 18px 0;">
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">本节聚焦触发本期观察的近期动向。可包含：近期重要公告、人员变动、并购消息、监管动作，或行业格局中值得关注的信号性事件。</p>
+
+<!-- Highlighted quote / key statement -->
+<section style="border-left:3px solid #6b5fa0;background:#eeeaf8;padding:14px 16px;margin:0 0 16px 0;border-radius:0 6px 6px 0;">
+<p style="font-size:14px;color:#444444;line-height:1.8;margin:0 0 6px 0;">「值得引用的关键原话或核心表态。可以是公告原文、公开发言，或文件条文摘录。」</p>
+<p style="font-size:12px;color:#888888;line-height:1.5;margin:0;">——来源机构 / 人名 &nbsp;|&nbsp; 时间</p>
+</section>
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">对上述动向的分析与解读。该动向的背景、意图，以及对行业格局、竞争关系或监管逻辑的潜在影响。</p>
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">进一步分析。如需横向比较，可在此简述同类机构的应对方式或市场整体走向，以凸显本期观察主体的独特性或共性规律。</p>
+
+<!-- ========== Section 4 ========== -->
+<h2 style="font-size:17px;font-weight:700;color:#222222;line-height:1.5;margin:28px 0 4px 0;padding:0;border:none;">
+<span style="display:inline-block;width:4px;height:18px;background:#6b5fa0;border-radius:2px;margin-right:8px;vertical-align:middle;"></span>四、观察者视角</h2>
+<hr style="border:none;height:1px;background-color:#c4bde8;margin:0 0 18px 0;">
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">本节是作者的主观判断与评价。可包含：对主体战略的预判、对其优劣势的独立评估，或对其未来走向的前瞻性判断。语气可适度主观，但须有依据。</p>
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">第二段评论。进一步展开对某一核心问题的深入判断，或对市场通行认知的修正与补充。</p>
+
+<!-- Closing statement -->
+<section style="border-left:3px solid #6b5fa0;background:#eeeaf8;padding:14px 16px;margin:0 0 20px 0;border-radius:0 6px 6px 0;">
+<p style="font-size:14px;color:#444444;line-height:1.8;margin:0;"><strong style="color:#6b5fa0;">结语一句话。</strong>点出核心结论，或给出观察后的整体判断。句式可稍具文学性，但须直指要点。</p>
+</section>
+
+</section>
+
+<!-- ========== 声明区 ========== -->
+<section style="padding:0 22px;">
+
+<section style="border-left:3px solid #6b5fa0;background:#eeeaf8;padding:14px 16px;margin:24px 0 12px 0;border-radius:0 6px 6px 0;">
+<p style="font-size:12px;color:#888888;line-height:1.75;margin:0 0 4px 0;"><strong style="color:#333333;font-size:13px;">AI辅助声明</strong></p>
+<p style="font-size:12px;color:#888888;line-height:1.75;margin:0;">本文由AI辅助完成信息采集与初稿生成，经人工审校、调序与深度改写后发布。事实性内容以原始来源为准。AI工具：Claude、豆包。</p>
+</section>
+
+<section style="border-left:3px solid #e0ddd6;background:#f8f7f4;padding:14px 16px;margin:0 0 24px 0;border-radius:0 6px 6px 0;">
+<p style="font-size:12px;color:#888888;line-height:1.75;margin:0 0 4px 0;"><strong style="color:#333333;font-size:13px;">声明</strong></p>
+<p style="font-size:12px;color:#888888;line-height:1.75;margin:0;">本文仅代表作者个人观察与分析，不构成任何法律意见或投资建议。文中引用的法律法规以官方公布文本为准。</p>
+</section>
+
+</section>
+
+<!-- Footer -->
+<section style="padding:0 22px 20px;">
+<hr style="border:none;height:1px;background-color:#e0ddd6;margin:0 0 20px 0;">
+<section style="text-align:center;padding:0 0 8px;">
+<p style="font-size:15px;color:#6b5fa0;font-weight:700;line-height:2;margin:0;">未来法域 · 全局观察</p>
+<p style="font-size:12px;color:#888888;line-height:1.8;margin:0 0 4px 0;">全图 · 降噪 · 法度 · 业相 · 归档实录 · ALL未来所</p>
+<p style="font-size:13px;color:#222222;font-weight:600;line-height:2;margin:0;">关注「未来法域」，不错过每一期</p>
+</section>
+</section>
+
+<!-- Bottom accent bar -->
+<hr style="border:none;height:6px;background-color:#6b5fa0;margin:0;">
+
+</section>
+</div>
+
+</body>
+</html>

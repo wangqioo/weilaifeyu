@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>法度 Vol.001 - 微信公众号粘贴版</title>
+<style>
+body { background: #f0f0f0; margin: 0; font-family: -apple-system, "PingFang SC", sans-serif; }
+.page-bar {
+  background: #1a4a6e; color: #fff; text-align: center; padding: 14px 20px;
+  font-size: 13px; line-height: 1.6; position: sticky; top: 0; z-index: 100;
+}
+.page-bar button {
+  background: #fff; color: #1a4a6e; border: none; padding: 8px 24px;
+  border-radius: 4px; font-size: 13px; font-weight: 600; cursor: pointer; margin-top: 8px;
+}
+.page-bar button:hover { background: #eef4fa; }
+.outer { max-width: 580px; margin: 20px auto; background: #fff; box-shadow: 0 1px 8px rgba(0,0,0,0.08); }
+</style>
+<script>
+async function copyContent() {
+  const el = document.getElementById('article');
+  const btn = document.getElementById('copyBtn');
+  try {
+    const html = el.outerHTML;
+    const text = el.innerText;
+    await navigator.clipboard.write([
+      new ClipboardItem({
+        'text/html': new Blob([html], { type: 'text/html' }),
+        'text/plain': new Blob([text], { type: 'text/plain' })
+      })
+    ]);
+    btn.textContent = 'Copied!';
+  } catch (e) {
+    const range = document.createRange();
+    range.selectNodeContents(el);
+    const sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+    document.execCommand('copy');
+    btn.textContent = 'Copied!';
+  }
+  setTimeout(() => { btn.textContent = '一键复制'; }, 2000);
+}
+</script>
+</head>
+<body>
+
+<div class="page-bar">
+  点击按钮复制富文本，然后粘贴到微信公众号编辑器<br>
+  <span style="opacity:0.7;font-size:11px">全部内联样式 | 栏目色：深海蓝 #1a4a6e</span><br>
+  <button id="copyBtn" onclick="copyContent()">一键复制</button>
+</div>
+
+<div class="outer">
+<section id="article" style="padding:0;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif;font-size:15px;color:#333333;line-height:1.85;">
+
+<!-- Top accent bar -->
+<hr style="border:none;height:6px;background-color:#1a4a6e;margin:0;">
+
+<!-- Header -->
+<section style="padding:24px 22px 16px;">
+
+<!-- Column tag -->
+<p style="margin:0 0 14px 0;">
+<span style="display:inline-block;background:#1a4a6e;color:#ffffff;font-size:12px;font-weight:600;padding:3px 10px;border-radius:3px;letter-spacing:1px;">法度 LEX</span>
+<span style="display:inline-block;background:#eef4fa;color:#1a4a6e;font-size:11px;font-weight:600;padding:3px 8px;border-radius:3px;margin-left:4px;border:1px solid #b5c8d8;">·演进</span>
+<span style="display:inline-block;background:#f8f7f4;color:#888888;font-size:11px;padding:3px 8px;border-radius:3px;margin-left:4px;">Vol.001</span>
+</p>
+
+<!-- Title -->
+<h1 style="font-size:21px;font-weight:700;color:#222222;line-height:1.4;margin:0 0 6px 0;padding:0;">法度·演进｜红筹模式的迭代与落幕</h1>
+
+<!-- Subtitle -->
+<p style="font-size:14px;color:#888888;line-height:1.5;margin:0 0 12px 0;">——资本市场时代转向新范式</p>
+
+<!-- Meta -->
+<p style="font-size:12px;color:#888888;line-height:1.5;margin:0 0 16px 0;">未来法域 · 法度 · 演进 &nbsp;|&nbsp; 周三 12:30 &nbsp;|&nbsp; 2026.03.18</p>
+
+<!-- Teal divider -->
+<hr style="border:none;height:2px;background-color:#1a4a6e;margin:0;">
+</section>
+
+<!-- Content body -->
+<section style="padding:0 22px 20px;">
+
+<!-- Lead -->
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">近日，一张网传截图显示：证监会办事服务平台某IPO项目（间接上市）备案于2026年3月13日反馈"请拆除红筹架构后再申报"，引发市场对红筹监管口径的广泛关注。</p>
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">香港资本市场热度持续攀升，叠加市场对红筹上市路径的讨论，共同构成观察中国企业跨境资本路径变迁的重要切面。红筹与VIE的退场，从来不是单一监管动作，而是全球格局收缩、中国资本市场成熟、核心技术主权抬升三重力量共振的必然结果。</p>
+
+<!-- ========== Section 1 ========== -->
+<h2 style="font-size:17px;font-weight:700;color:#222222;line-height:1.5;margin:28px 0 4px 0;padding:0;border:none;">
+<span style="display:inline-block;width:4px;height:18px;background:#1a4a6e;border-radius:2px;margin-right:8px;vertical-align:middle;"></span>一、起源：制度空白期的历史突围（1990s—2000s）</h2>
+<hr style="border:none;height:1px;background-color:#b5c8d8;margin:0 0 18px 0;">
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">上世纪九十年代，中国资本市场刚刚起步。上海证券交易所、深圳证券交易所先后设立，却仍以传统产业为主，发行审核节奏缓慢，外资准入受限，外汇管制严格，跨境投融资几乎没有制度化通路。大批互联网、科技、传媒类企业急需资本扩张，却无法在境内获得融资支持，也无法合法实现境外上市。</p>
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">在法律与监管尚未覆盖的空白地带，红筹架构与VIE（Variable Interest Entities，可变利益实体）协议控制相继诞生。简单而言：</p>
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 12px 0;text-align:justify;"><strong style="color:#1a4a6e;">红筹架构</strong>，是境内实际控制人在境外（开曼、BVI¹）设立控股平台，以境外平台作为上市主体，直接持有境内公司股权，实现资产出境、境外上市。</p>
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;"><strong style="color:#1a4a6e;">VIE协议控制</strong>，则是在外资禁止准入的特殊行业，通过一系列商业协议而非股权，实现境外上市主体对境内运营公司的控制、管理与利润合并，以此绕开产业准入限制。</p>
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">二者均为特定历史条件下的产物，而真正将其落地为可复制、可推广的制度化路径，是中国最早一批跨境法律服务的先行者。2000年新浪登陆纳斯达克，便是由彼时头部跨境律师团队主导设计，首次将VIE架构完整落地，成为中国企业境外上市的"开山案例"。这一结构并非简单的交易设计，而是在法律框架内，对跨境投资、外资准入、外汇管理、公司治理做出的系统性创设，直接奠定此后二十年中国科技企业的资本通路。</p>
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">紧随新浪之后，百度、腾讯、阿里等行业龙头相继采用红筹或VIE架构登陆境外资本市场。这一时期，监管层以包容性默许为基调——资本市场尚处起步阶段，发展优先于规则完备，效率优先于结构绝对清晰。法律人则以专业填补制度空白，在规则边缘搭建连接中国企业与全球资本的桥梁。</p>
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">同期，中国资本市场也在底层奠基：1998年《中华人民共和国证券法》颁布，多层次资本市场雏形初现，创业板筹备启动。境内市场逐步成长，与境外红筹/VIE通路形成并行格局，一条服务传统产业，一条支撑创新经济，共同构成早期中国资本市场生态。</p>
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">资本层面，这一阶段几乎是美元基金的天下：软银、红杉、IDG等境外机构凭借成熟的退出通路与全球化资源，成为中国科技企业的核心投资方，红筹/VIE架构恰好匹配美元基金"境外募资—境外投资—境外退出"的完整闭环，二者深度绑定。</p>
+
+<!-- ========== Section 2 ========== -->
+<h2 style="font-size:17px;font-weight:700;color:#222222;line-height:1.5;margin:28px 0 4px 0;padding:0;border:none;">
+<span style="display:inline-block;width:4px;height:18px;background:#1a4a6e;border-radius:2px;margin-right:8px;vertical-align:middle;"></span>二、扩张：全球化红利与规则惯性（2010s—2020初）</h2>
+<hr style="border:none;height:1px;background-color:#b5c8d8;margin:0 0 18px 0;">
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">加入WTO后，全球化进入鼎盛阶段，跨境资本自由流动，中国经济高速增长，红筹/VIE架构从"特殊安排"演变为"市场标配"。</p>
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 12px 0;text-align:justify;">2006年，六部委联合发布《关于外国投资者并购境内企业的规定》（业界简称"10号文"），对关联并购、返程投资设置审批要求，试图规范跨境架构。</p>
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 12px 0;text-align:justify;">实践中，市场逐步形成<strong style="color:#1a4a6e;">"一步走"与"两步走"</strong>两类实操路径：</p>
+
+<section style="background:#f8f7f4;border-left:3px solid #b5c8d8;border-radius:0 6px 6px 0;padding:14px 18px;margin:12px 0 18px 0;">
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 10px 0;padding-left:16px;text-align:justify;">· <strong style="color:#1a4a6e;">一步走：</strong>由境内实际控制人直接在境外设立平台，返程收购境内运营实体，试图直接完成红筹架构搭建。但因受10号文关联并购审批限制，实操中基本难以落地。</p>
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0;padding-left:16px;text-align:justify;">· <strong style="color:#1a4a6e;">两步走：</strong>通过引入境外第三方作为名义收购方，先将境内股权转出，再由实际控制人在境外逐步回收控制权，以此绕开关联并购限制，成为此后十余年间行业最主流的红筹搭建方式。</p>
+</section>
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">港交所在这一阶段全面承接红筹企业，成为中国企业境外上市的核心枢纽。2018年港交所改革上市制度，接纳同股不同权、未盈利生物科技公司，小米、美团、京东、网易等红筹企业密集登陆港股，香港成为红筹模式最成熟、最活跃的市场。</p>
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 12px 0;text-align:justify;">这一时期，中国资本市场建设加速推进，多层次资本市场体系逐步清晰：</p>
+
+<section style="background:#f8f7f4;border-left:3px solid #b5c8d8;border-radius:0 6px 6px 0;padding:14px 18px;margin:12px 0 18px 0;">
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 8px 0;padding-left:16px;text-align:justify;">· 早期以上海、深圳主板为主，审核<strong style="color:#1a4a6e;">以净利润、市值、经营规模为核心尺度</strong>，主要服务成熟企业；</p>
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 8px 0;padding-left:16px;text-align:justify;">· 2019年上海证券交易所科创板设立并试点注册制，首次<strong style="color:#1a4a6e;">放开未盈利企业上市限制，审核重点转向科创属性</strong>；</p>
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 8px 0;padding-left:16px;text-align:justify;">· 后续创业板、北交所相继改革，<strong style="color:#1a4a6e;">直至注册制全面落地，市场转向以信息披露为核心</strong>，对不同类型、不同阶段企业的包容性大幅提升；</p>
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 8px 0;padding-left:16px;text-align:justify;">· 上海证券交易所设立科创板并试点注册制；</p>
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 8px 0;padding-left:16px;text-align:justify;">· 新修订《中华人民共和国证券法》实施，强化信息披露与投资者保护；</p>
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 8px 0;padding-left:16px;text-align:justify;">· 沪港通、深港通互联互通机制落地，在岸与离岸资本闭环形成；</p>
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0;padding-left:16px;text-align:justify;">· 外商投资准入负面清单持续缩减，《中华人民共和国外商投资法》正式实施。</p>
+</section>
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">境内市场日益成熟，红筹/VIE的"不可替代性"逐步下降。但在全球化惯性之下，市场仍普遍将其视为"最优解"，大量企业不问自身行业、股权结构、数据安全需求，盲目跟风搭建离岸架构。</p>
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">资本层面，人民币基金开始崛起：本土创投、国资背景基金、市场化人民币基金规模快速扩容，逐步形成与美元基金分庭抗礼的格局。但人民币基金的退出仍高度依赖境内资本市场，与红筹/VIE的境外通路存在天然隔阂。</p>
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">在市场普遍盲目追捧红筹与VIE架构的热潮中，笔者于2020年服务某境内科技企业时，仍结合该企业特性及政策发展前瞻性预期明确建议：以结构相对简单、风险可控的境内架构为主，立足中国本土业务属性、长期监管趋势与综合合规成本，而非盲目跟风搭建复杂离岸结构。这一选择最终为企业带来了切实价值：大幅降低了跨境合规、税务与治理成本。融资方面，不仅可以高效对接了本土融资，更在后续资本格局加速本土化过程中占据先机，有效规避了2023年硅谷银行爆雷等跨境风险事件中同一孵化器企业共同面临的境外资金冻结、汇率波动等隐患，真正体现了本土架构在安全、成本与效率上的长期优势，也印证了趋势判断的前瞻性。</p>
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">这一实践选择，正是境内资本成长、监管逻辑转向的微观缩影——当境内市场足够成熟、本土资本足够活跃，企业无需再依赖离岸架构，也能获得高效融资与长期发展空间。红筹并非唯一"正确"选择。</p>
+
+<!-- ========== Section 3 ========== -->
+<h2 style="font-size:17px;font-weight:700;color:#222222;line-height:1.5;margin:28px 0 4px 0;padding:0;border:none;">
+<span style="display:inline-block;width:4px;height:18px;background:#1a4a6e;border-radius:2px;margin-right:8px;vertical-align:middle;"></span>三、转折：全球化退潮与主权回归（2020至今）</h2>
+<hr style="border:none;height:1px;background-color:#b5c8d8;margin:0 0 18px 0;">
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">2020年成为全球资本格局的关键拐点。全球化从扩张走向收缩，跨境监管对抗加剧，红筹/VIE赖以生存的外部环境彻底瓦解。</p>
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">外部层面，美国《外国公司问责法》（Holding Foreign Companies Accountable Act, HFCAA）强势出台，强制要求在美上市中国企业提交审计底稿，直接触及主权与安全底线。中美跨境审计监管谈判历经多轮博弈，最终于2022年达成监管合作协议²，但大量中概股仍长期面临退市风险、估值承压、流动性萎缩的尴尬处境，<strong style="color:#1a4a6e;">阿里巴巴、京东、百度、拼多多等龙头先后启动港股双重主要上市，成为中概股回归大潮的标志性事件</strong>。过去"两头通吃"的离岸架构，瞬间成为监管冲突的焦点。资本不再无国界，规则不再有弹性，司法辖区的竞争取代协同，红筹模式的外部生存基础被彻底动摇。</p>
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">2023年，红杉资本宣布全球架构分拆³，红杉中国实现独立运营，成为全球顶级美元基金全面本土化的标志性事件。这一行业变局进一步印证：本土资本与离岸资本的路径分化日益清晰，立足中国市场、适配本土规则的架构选择，更符合长期发展趋势。</p>
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">2026年1月8日，商务部在例行新闻发布会上正式官宣，将依据《中华人民共和国技术进出口管理条例》《中华人民共和国出口管制法》等法律法规，<strong style="color:#1a4a6e;">对Meta（Meta Platforms, Inc.）收购新加坡AI企业Manus交易开展合规评估调查</strong>⁴。Manus的核心技术与团队源自中国境内运营主体，早年采用典型红筹/VIE架构搭建，后通过变更注册地、剥离境内实体等方式试图规避监管，本质是沿用传统离岸架构实现技术与资产跨境转移。此次监管调查，正是对借红筹/离岸架构规避技术与数据监管行为的明确约束，与红筹上市口径收紧的底层逻辑高度一致：核心技术与关键资产必须在主权框架内管控，传统离岸套利模式不再具备空间。</p>
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 12px 0;text-align:justify;">内部层面，中国资本市场进入高质量发展与主权强化阶段：</p>
+
+<section style="background:#f8f7f4;border-left:3px solid #b5c8d8;border-radius:0 6px 6px 0;padding:14px 18px;margin:12px 0 18px 0;">
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 8px 0;padding-left:16px;text-align:justify;">· 数据安全上升为国家战略，《中华人民共和国数据安全法》《中华人民共和国个人信息保护法》实施，核心数据必须境内存储；</p>
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 8px 0;padding-left:16px;text-align:justify;">· 境外上市安全审查制度全面落地，数据安全、国家安全、产业安全成为前提；</p>
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 8px 0;padding-left:16px;text-align:justify;">· 注册制全面落地，境内资本市场对科技企业、创新企业的包容性大幅提升；</p>
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0;padding-left:16px;text-align:justify;">· 多层级资本市场体系成型，上交所主板、科创板，深交所主板、创业板，北交所分工明确，企业不再依赖境外通路。</p>
+</section>
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">红筹与VIE的核心功能——规避外资准入、绕开境内审核、实现跨境利润转移——逐一失效。更重要的是，其控制权模糊、治理离岸、资本外循环、数据跨境的天然缺陷，与新时代监管逻辑完全相悖。与此同时，跨境数据治理、跨境税务合规、技术出口管制等规则持续细化，企业在实务中普遍感知：维持复杂跨境结构的合规成本持续攀升，选择清晰、简单、在岸的结构，成为更务实、更可持续的路径。</p>
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">2026年3月，网传证监会要求拆除红筹架构的反馈意见，更是将这一监管导向从原则层面落到实操端口。尽管，我们需要强调的是，截图真实性尚未证实、具体适用范围未公开，但业内各界闻风而动的反馈信号已足够明确：红筹架构不再被监管鼓励，甚至可能成为上市申报的实质性障碍。</p>
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">一批AI、硬科技、数据密集型企业已率先调整路径：主动拆除红筹，回归H股或直接境内上市。<strong style="color:#1a4a6e;">智谱等科技龙头选择以H股结构登陆港股，正是对这一趋势的明确回应</strong>。法律界的工作重心，也从"搭建红筹"全面转向架构清理、合规整改、拆VIE、回归境内/香港H股。历史再次走到专业服务的转折点：从创设离岸结构，到回归在岸合规。</p>
+
+<!-- ========== Section 4 ========== -->
+<h2 style="font-size:17px;font-weight:700;color:#222222;line-height:1.5;margin:28px 0 4px 0;padding:0;border:none;">
+<span style="display:inline-block;width:4px;height:18px;background:#1a4a6e;border-radius:2px;margin-right:8px;vertical-align:middle;"></span>四、范式切换：港交所改革与一松一紧的顶层同构</h2>
+<hr style="border:none;height:1px;background-color:#b5c8d8;margin:0 0 18px 0;">
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">与红筹退潮同步，港交所正在完成一次深刻的角色进化。</p>
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">2025年香港IPO市场迎来爆发式繁荣，重登全球新股融资中心榜首，全年共有119家新上市公司，首次公开招股集资总额达374亿美元，同比增长231%，上市后再融资规模达660亿美元，同比升136%，两项数据均创2021年以来新高⁵。这一繁荣态势是多重因素共振的结果：</p>
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">一方面得益于全球AI热潮下中国AI产业链的活跃度提升，新经济公司在当年新上市公司中占比超过三分之二；</p>
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">另一方面，港交所持续的制度创新精准适配市场需求，<strong style="color:#1a4a6e;">18C特专科技板块为AI、芯片等硬科技企业打开上市通道</strong>，2025年8月生效的IPO定价机制及公开市场规定优化，进一步提升市场流动性与定价效率，当年股票现货市场日均成交额达2498亿港元，同比增长89.5%⁶。</p>
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">与此同时，在地缘政治日趋复杂的全球环境下，香港作为国际化资本市场的独特优势进一步凸显：既深度连接内地经济与产业资源，又保持国际规则、资金流动与法治体系的开放性，形成"内联腹地、外接全球"的枢纽地位，成为全球资本配置中国资产、中国企业对接国际市场兼顾安全与效率的最优选择。</p>
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">2026年3月13日，港交所刊发《有关提升香港上市机制竞争力的咨询文件》⁷，拟推出一揽子优化举措：扩大保密递表适用范围至所有新申请人；优化不同投票权架构上市门槛；放宽海外发行人第二上市标准；强化上市申请退回机制透明度等。而在此之前，港交所已于2025年5月推出科企专线，为特专科技企业提供上市前咨询与保密递表服务，这些制度创新共同构建对科技企业的全方位支持体系。</p>
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">从18A生物科技，到18C特专科技，再到科企专线、全面保密递表与上市机制竞争力改革，港交所的改革方向高度清晰：不再依赖红筹模式，转而服务股权清晰、治理规范、主权明确的中国优质企业。2026年开局更为强劲，截至1月30日，股权资本市场发行规模达158亿美元，约为2025年同期的六倍，其中人工智能领域企业成为上市主力，<strong style="color:#1a4a6e;">2025年12月至2026年1月，仅AI价值链相关公司便在港集资49亿美元⁸，Minimax、智谱等生成式人工智能平台相继上市，形成涵盖基础设施、平台、应用的完整AI发行人生态圈。</strong></p>
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">2025年的市场繁荣中，既有存量红筹企业赶在规则明确前完成申报的因素，更有大量AI、硬科技企业以纯净架构拥抱新制度的选择。将内地监管与港交所改革并置观察，一松一紧、高度同构的格局已然形成：内地聚焦主权、安全与控制权底线，香港优化流程、效率与上市服务体验，二者协同构建更适配新阶段的跨境融资生态。</p>
+
+<!-- ========== Section 5 ========== -->
+<h2 style="font-size:17px;font-weight:700;color:#222222;line-height:1.5;margin:28px 0 4px 0;padding:0;border:none;">
+<span style="display:inline-block;width:4px;height:18px;background:#1a4a6e;border-radius:2px;margin-right:8px;vertical-align:middle;"></span>五、终局：一个时代落幕，一种新秩序诞生</h2>
+<hr style="border:none;height:1px;background-color:#b5c8d8;margin:0 0 18px 0;">
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">此次红筹监管信号引发行业广泛讨论，不少人感到意外。但在长期跟踪宏观局势、资本市场演进、监管逻辑与法律脉络的视角下，这一转向实则在预料之中，亦是制度成熟的必然结果。</p>
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">自2015年至今，笔者以不同角色深度参与资本市场与投融资业务，在长期实务中见证市场生态的渐进式迭代：早年投融资条款更盲目偏向资本方，模板化、单边性特征显著，被投企业缺乏谈判空间；伴随境内监管体系不断完善，企业与资本方逐步走向对等协商、动态平衡，条款更贴合交易实质；近年来预期市场将进一步摆脱境外文本惯性，立足本土监管环境、交易结构与双方权责，形成更具适配性的投资协议体系。<strong style="color:#1a4a6e;">监管也从外部参照维度，逐步演变为覆盖全流程、稳定可预期的制度底座，成为所有市场主体共同遵循的治理框架。</strong></p>
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">红筹与VIE的历史，是中国资本市场发展的侧影。<strong style="color:#1a4a6e;">它生于制度空白，兴于全球化红利，止于主权回归与规则成熟。</strong>它由法律人以专业创设，由市场以实践推动，由监管以秩序收束。</p>
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">从网传证监会「拆除红筹架构后再申报」的实操信号，到Manus案监管对技术与数据主权的强化约束，再到港交所向纯净架构倾斜的制度改革，所有事件共同指向同一个结论：核心资产必须清晰，资本必须闭环，架构必须纯净。不存在两头通吃的套利空间，不存在模糊地带的灰色操作，企业必须在境内主权与境外离岸之间做出理性选择。</p>
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">对于今天准备上市的企业而言，最重要的启示早已明确：不存在永远正确的架构，只存在顺应趋势、贴合自身、安全可持续的架构。盲目跟风的时代已经结束，因地制宜、因势利导、长期主义的架构设计，才真正具备穿越周期的价值。</p>
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">红筹模式的时代已然落幕。</p>
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">这不仅是一段资本结构的变迁，更是中国资本市场从制度补缺到自主有序、从被动适配到主动引领的成熟标志。</p>
+
+<p style="font-size:15px;color:#333333;line-height:1.85;margin:0 0 16px 0;text-align:justify;">未来的跨境融资格局，不再是简单的"境外上市"叙事，而是主权安全、产业自主与全球融通三者协同的新秩序。在清晰的规则底座之上，中国企业与全球资本的对话，终将走向更稳健、更可持续、更具长期价值的新征程。</p>
+
+<!-- ========== 注释 ========== -->
+<h2 style="font-size:17px;font-weight:700;color:#222222;line-height:1.5;margin:28px 0 4px 0;padding:0;border:none;">
+<span style="display:inline-block;width:4px;height:18px;background:#1a4a6e;border-radius:2px;margin-right:8px;vertical-align:middle;"></span>注释</h2>
+<hr style="border:none;height:1px;background-color:#b5c8d8;margin:0 0 18px 0;">
+
+<p style="font-size:12px;color:#999999;line-height:1.85;margin:0 0 8px 0;padding-left:16px;text-indent:-16px;text-align:justify;">¹ BVI：英属维尔京群岛（British Virgin Islands），全球主流离岸公司注册地，常用于红筹架构控股平台。</p>
+
+<p style="font-size:12px;color:#999999;line-height:1.85;margin:0 0 8px 0;padding-left:16px;text-indent:-16px;text-align:justify;">² 中国证监会 &amp; 美国PCAOB 2022年审计监管合作公告：中美达成审计底稿跨境监管检查安排，标志中概股审计博弈阶段性落地。官方链接：<span style="color:#1a4a6e;word-break:break-all;">http://www.csrc.gov.cn/csrc/c100028/c5572328/content.shtml</span></p>
+
+<p style="font-size:12px;color:#999999;line-height:1.85;margin:0 0 8px 0;padding-left:16px;text-indent:-16px;text-align:justify;">³ 红杉资本. Sequoia Capital Announces Separation into Three Independent Entities. 2023-06-06. 引自: <span style="color:#1a4a6e;word-break:break-all;">https://www.sequoiacap.com/news/sequoia-capital-announces-separation-into-three-independent-entities/</span></p>
+
+<p style="font-size:12px;color:#999999;line-height:1.85;margin:0 0 8px 0;padding-left:16px;text-indent:-16px;text-align:justify;">⁴ 商务部官网2026年1月8日例行新闻发布会：对Meta收购Manus开展技术出口、数据出境合规调查。官方链接：<span style="color:#1a4a6e;word-break:break-all;">https://app.xinhuanet.com/news/article.html?articleId=5b6485b5a53da287852014d415ed83b0</span></p>
+
+<p style="font-size:12px;color:#999999;line-height:1.85;margin:0 0 8px 0;padding-left:16px;text-indent:-16px;text-align:justify;">⁵ 港交所官网2026年2月9日《2025年香港股權資本市場回顧》：2025年香港IPO集資額374億美元，再融資660億美元，均創2021年以來新高。官方鏈接：<span style="color:#1a4a6e;word-break:break-all;">https://www.hkexgroup.com/Media-Centre/Insight/Insight/2026/HKEX-Insight/ECM-performance-in-2025?sc_lang=zh-HK</span></p>
+
+<p style="font-size:12px;color:#999999;line-height:1.85;margin:0 0 8px 0;padding-left:16px;text-indent:-16px;text-align:justify;">⁶ 港交所官网2026年1月16日《回顧2025年香港市場的增長動力》：2025年香港現貨市場日均成交2498億港元，新經濟公司佔新上市公司超三分之二。官方鏈接：<span style="color:#1a4a6e;word-break:break-all;">https://www.hkexgroup.com/media-centre/insight/insight/2026/hkex-insight/what-drove-hong-kong-markets-in-2025?sc_lang=zh-HK</span></p>
+
+<p style="font-size:12px;color:#999999;line-height:1.85;margin:0 0 8px 0;padding-left:16px;text-indent:-16px;text-align:justify;">⁷ 港交所官网2026年3月13日官方文件：《有关提升香港上市机制竞争力的咨询文件》全文。官方链接：<span style="color:#1a4a6e;word-break:break-all;">https://www.hkex.com.hk/-/media/HKEX-Market/News/Market-Consultations/2016-Present/March-2026-Competitiveness-Review/Consultation-Paper/cp202603_c.pdf</span></p>
+
+<p style="font-size:12px;color:#999999;line-height:1.85;margin:0 0 8px 0;padding-left:16px;text-indent:-16px;text-align:justify;">⁸ 港交所官网2026年2月3日《人工智能企業正引領2026年上市浪潮》：2025年12月至2026年1月AI企業在港集資49億美元，科企專線與保密遞表機制助力科技企業上市。官方鏈接：<span style="color:#1a4a6e;word-break:break-all;">https://www.hkexgroup.com/media-centre/insight/insight/2026/johnson-chui/ai-ipos-drive-a-strong-start-to-2026?sc_lang=zh-HK</span></p>
+
+</section>
+
+<!-- ========== 声明区 ========== -->
+<section style="padding:0 22px;">
+
+<section style="border-left:3px solid #1a4a6e;background:#eef4fa;padding:14px 16px;margin:24px 0 12px 0;border-radius:0 6px 6px 0;">
+<p style="font-size:12px;color:#888888;line-height:1.75;margin:0 0 4px 0;"><strong style="color:#333333;font-size:13px;">AI辅助声明</strong></p>
+<p style="font-size:12px;color:#888888;line-height:1.75;margin:0;">本文由AI辅助完成信息采集与初稿生成，经人工审校、调序与深度改写后发布。事实性内容以原始来源为准。AI工具：Claude、豆包。</p>
+</section>
+
+<section style="border-left:3px solid #e0ddd6;background:#f8f7f4;padding:14px 16px;margin:0 0 24px 0;border-radius:0 6px 6px 0;">
+<p style="font-size:12px;color:#888888;line-height:1.75;margin:0 0 4px 0;"><strong style="color:#333333;font-size:13px;">声明</strong></p>
+<p style="font-size:12px;color:#888888;line-height:1.75;margin:0;">本文仅代表作者个人观察与分析，不构成任何法律意见或投资建议。文中引用的法律法规以官方公布文本为准。</p>
+</section>
+
+</section>
+
+<!-- Footer -->
+<section style="padding:0 22px 20px;">
+<hr style="border:none;height:1px;background-color:#e0ddd6;margin:0 0 20px 0;">
+<section style="text-align:center;padding:0 0 8px;">
+<p style="font-size:15px;color:#1a4a6e;font-weight:700;line-height:2;margin:0;">未来法域 · 全局观察</p>
+<p style="font-size:12px;color:#888888;line-height:1.8;margin:0 0 4px 0;">全图 · 降噪 · 法度 · 业相 · 归档实录 · ALL未来所</p>
+<p style="font-size:13px;color:#222222;font-weight:600;line-height:2;margin:0;">关注「未来法域」，不错过每一期</p>
+</section>
+</section>
+
+</section>
+
+<!-- Bottom accent bar -->
+<hr style="border:none;height:6px;background-color:#1a4a6e;margin:0;">
+
+</section>
+</div>
+
+</body>
+</html>
